@@ -36,12 +36,11 @@ class login_form(forms.ModelForm):
         self.fields['c_password'].label = ''
 
 
-class profile_form(forms.ModelForm):
+class edit_profile_form(forms.ModelForm):
     class Meta:
         model = Company_Profile
-        fields = "__all__"
+        fields = ['c_phone','c_street', 'c_area', 'c_city', 'c_state', 'c_country', 'c_pincode', 'c_website', 'c_linkedin', 'c_logo']
         widgets = {
-            'c_name': forms.TextInput(attrs={'class': 'form-control'}),
             'c_phone': forms.TextInput(attrs={'class': 'form-control'}),
             'c_street': forms.TextInput(attrs={'class': 'form-control'}),
             'c_area': forms.TextInput(attrs={'class': 'form-control'}),
@@ -49,9 +48,23 @@ class profile_form(forms.ModelForm):
             'c_state': forms.TextInput(attrs={'class': 'form-control'}),
             'c_country': forms.TextInput(attrs={'class': 'form-control'}),
             'c_pincode': forms.TextInput(attrs={'class': 'form-control'}),
-
+            'c_website': forms.TextInput(attrs={'class': 'form-control'}),
+            'c_linkedin': forms.TextInput(attrs={'class': 'form-control'}),
+            'c_logo': forms.FileInput(attrs={'class': 'form-control'}),
         }
 
+    def __init__(self, *args, **kwargs):
+        super(edit_profile_form, self).__init__(*args, **kwargs)
+        self.fields['c_phone'].label = 'Phone '
+        self.fields['c_street'].label = 'Street '
+        self.fields['c_area'].label = 'Area '
+        self.fields['c_city'].label = 'City '
+        self.fields['c_state'].label = 'State '
+        self.fields['c_country'].label = 'Country '
+        self.fields['c_pincode'].label = 'Pincode '
+        self.fields['c_website'].label = 'Website '
+        self.fields['c_linkedin'].label = 'Linked-in '
+        self.fields['c_logo'].label = 'Logo'
 
 
 class forgot_password_form(forms.Form):

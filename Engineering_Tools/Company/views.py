@@ -6,7 +6,7 @@ import random
 
 
 from .models import Register, Company_Profile
-from .forms import register_form, login_form, profile_form, forgot_password_form, otp_match_form, add_new_password_form
+from .forms import register_form, login_form, forgot_password_form, otp_match_form, add_new_password_form, edit_profile_form
 
 
 # Create your views here.
@@ -33,7 +33,8 @@ def Register_view(request):
                 register.save()
                 data = Register.objects.get(c_email=request.POST.get('c_email'))
                 request.session["company_details"] = data.c_email
-                Company_Profile.objects.create(c_name = request.POST.get('c_name'))
+                request.session["company_name"] = data.c_name
+                #Company_Profile.objects.create(c_name = request.POST.get('c_name'))
 
                 #email for welcome
                 subject = "Sahil Rajput, Engineering Tools"
@@ -69,6 +70,7 @@ def Login_view(request):
                 if (data.c_password == password):
                     print(data.c_password)
                     request.session["company_details"] = data.c_email
+                    request.session["company_name"] = data.c_name
                     return redirect('Company:Home')
     else:
         l_form = login_form()
@@ -150,7 +152,16 @@ def Add_new_password(request):
 
 
 
-def Profile_view(request):
-    temp = "Company/profile.html"
-    p_form = profile_form()
+def Edit_profile_view(request):
+    temp = "Company/edit_profile.html"
+    if request.method == 'POST':
+        p_form = edit_profile_form(request.POST or None, request.FILES or None)
+        if p_form.is_valid():
+            profile_form = p_form.save(commit = False)
+            profile_form.c_name = request.session.get('company_name')
+            profile_form.save()
+            return redirect('Company:Home')
+    else:
+        p_form = edit_profile_form()
+
     return render(request, temp, {'p_form':p_form})
