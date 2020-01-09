@@ -51,3 +51,35 @@ class profile_form(forms.ModelForm):
             'c_pincode': forms.TextInput(attrs={'class': 'form-control'}),
 
         }
+
+
+
+class forgot_password_form(forms.Form):
+    email = forms.CharField(max_length = 50, widget = forms.TextInput(attrs={'class':'form-control', 'placeholder':'Enter Your Email'}),)
+
+    def __init__(self, *args, **kwargs):
+        super(forgot_password_form, self).__init__(*args, **kwargs)
+        self.fields['email'].label = ''
+
+
+class otp_match_form(forms.Form):
+    otp = forms.CharField(max_length = 6, widget= forms.TextInput(attrs={'class':'form-control', 'placeholder':'Enter Your OTP'}))
+
+    def __init__(self, *args, **kwargs):
+        super(otp_match_form, self).__init__(*args, **kwargs)
+        self.fields['otp'].label = ''
+
+
+class add_new_password_form(forms.ModelForm):
+    class Meta:
+        model = Register
+        fields = [ 'c_password' , 'c_r_password' ]
+        widgets = {
+            'c_password': forms.TextInput(attrs={'placeholder': 'Enter Email', 'class': 'form-control'}),
+            'c_r_password': forms.TextInput(attrs={'placeholder': 'Enter Password', 'class': 'form-control'}),
+        }
+
+    def __init__(self, *args, **kwargs):
+        super(add_new_password_form, self).__init__(*args, **kwargs)
+        self.fields['c_password'].label = ''
+        self.fields['c_r_password'].label = ''
