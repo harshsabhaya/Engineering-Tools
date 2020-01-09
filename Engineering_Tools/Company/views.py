@@ -6,7 +6,7 @@ import random
 
 
 from .models import Register, Company_Profile
-from .forms import register_form, login_form, forgot_password_form, otp_match_form, add_new_password_form, edit_profile_form
+from .forms import register_form, login_form, forgot_password_form, otp_match_form, add_new_password_form, add_profile_form
 
 
 # Create your views here.
@@ -34,6 +34,7 @@ def Register_view(request):
                 data = Register.objects.get(c_email=request.POST.get('c_email'))
                 request.session["company_details"] = data.c_email
                 request.session["company_name"] = data.c_name
+                request.session["complete_profile"] = True
                 #Company_Profile.objects.create(c_name = request.POST.get('c_name'))
 
                 #email for welcome
@@ -63,6 +64,9 @@ def Login_view(request):
             print(email + " " + password)
             is_email = Register.objects.filter(c_email__iexact=email).exists()
             is_pass = Register.objects.filter(c_password__iexact=password).exists()
+            is_profile = Company_Profile.objects.filter(c_email__iexact = email).exists()
+            if is_profile:
+                request.session["complete_profile"] = False
             print(is_email)
             print(is_pass)
             if is_email and is_pass:
@@ -152,16 +156,17 @@ def Add_new_password(request):
 
 
 
-def Edit_profile_view(request):
-    temp = "Company/edit_profile.html"
+def Add_profile_view(request):
+    temp = "Company/add_profile.html"
     if request.method == 'POST':
-        p_form = edit_profile_form(request.POST or None, request.FILES or None)
+        p_form = add_profile_form(request.POST or None, request.FILES or None)
         if p_form.is_valid():
             profile_form = p_form.save(commit = False)
             profile_form.c_name = request.session.get('company_name')
             profile_form.save()
+            request.session["complete_profile"] = False
             return redirect('Company:Home')
     else:
-        p_form = edit_profile_form()
+        p_form = add_profile_form()
 
     return render(request, temp, {'p_form':p_form})

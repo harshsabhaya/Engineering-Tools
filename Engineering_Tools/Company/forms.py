@@ -36,7 +36,7 @@ class login_form(forms.ModelForm):
         self.fields['c_password'].label = ''
 
 
-class edit_profile_form(forms.ModelForm):
+class add_profile_form(forms.ModelForm):
     class Meta:
         model = Company_Profile
         fields = ['c_phone','c_street', 'c_area', 'c_city', 'c_state', 'c_country', 'c_pincode', 'c_website', 'c_linkedin', 'c_logo']
@@ -54,7 +54,7 @@ class edit_profile_form(forms.ModelForm):
         }
 
     def __init__(self, *args, **kwargs):
-        super(edit_profile_form, self).__init__(*args, **kwargs)
+        super(add_profile_form, self).__init__(*args, **kwargs)
         self.fields['c_phone'].label = 'Phone '
         self.fields['c_street'].label = 'Street '
         self.fields['c_area'].label = 'Area '
