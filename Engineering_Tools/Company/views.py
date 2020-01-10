@@ -166,3 +166,8 @@ def Add_profile_view(request):
         p_form = add_profile_form()
 
     return render(request, temp, {'p_form':p_form})
+
+
+def Show_profile_view(request):
+    temp = "Company/profile.html"
+    return render(request,temp)

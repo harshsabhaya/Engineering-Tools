@@ -39,7 +39,6 @@ class Company_Profile(models.Model):
     c_website = models.URLField(max_length = 200)
     c_linkedin = models.URLField(max_length = 200)
 
-
     def __str__(self):
         return self.c_name
 
