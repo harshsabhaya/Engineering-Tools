@@ -313,9 +313,6 @@
                         </li>
                         <li class="has-sub-menu"><a href="#"><i class="ti-package"></i> <span>Profile</span></a>
                             <ul class="side-header-sub-menu">
-                                {% if request.session.complete_profile %}
-                                    <li><a href="{% url 'Company:Add_profile' %}"><span>Complete Profile</span></a></li>
-                                {% endif %}
                                 <li><a href="elements-avatar.html"><span>View Profile</span></a></li>
                                 <li><a href="elements-avatar.html"><span>Edit Profile</span></a></li>
                             </ul>

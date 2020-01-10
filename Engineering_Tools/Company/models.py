@@ -10,7 +10,7 @@ def get_filename_ext(filepath):
     return name, ext
 
 def upload_image_path(instance, filename):
-    new_filename = instance.c_name + "_" + str(random.randint(1,1000))
+    new_filename = str(instance.c_name) + "_" + str(random.randint(1,1000))
     name, ext = get_filename_ext(filename)
     final_filename = '{new_filename}{ext}'.format(new_filename=new_filename, ext=ext)
     return "Company/{final_filename}".format(final_filename=final_filename)

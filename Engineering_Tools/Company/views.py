@@ -34,7 +34,6 @@ def Register_view(request):
                 data = Register.objects.get(c_email=request.POST.get('c_email'))
                 request.session["company_details"] = data.c_email
                 request.session["company_name"] = data.c_name
-                request.session["complete_profile"] = True
                 #Company_Profile.objects.create(c_name = request.POST.get('c_name'))
 
                 #email for welcome
@@ -64,9 +63,6 @@ def Login_view(request):
             print(email + " " + password)
             is_email = Register.objects.filter(c_email__iexact=email).exists()
             is_pass = Register.objects.filter(c_password__iexact=password).exists()
-            is_profile = Company_Profile.objects.filter(c_email__iexact = email).exists()
-            if is_profile:
-                request.session["complete_profile"] = False
             print(is_email)
             print(is_pass)
             if is_email and is_pass:
@@ -163,8 +159,8 @@ def Add_profile_view(request):
         if p_form.is_valid():
             profile_form = p_form.save(commit = False)
             profile_form.c_name = request.session.get('company_name')
+            #print(c_name)
             profile_form.save()
-            request.session["complete_profile"] = False
             return redirect('Company:Home')
     else:
         p_form = add_profile_form()
