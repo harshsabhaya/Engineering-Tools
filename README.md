@@ -7,3 +7,5 @@ Login, Logout and Registration Done -- At Seller Side
 All Authetication process complete -- At Seller Side
 
 Profile Created -- At Seller Side
+
+Field Error Solved In Sidebar -- At Seller Side
