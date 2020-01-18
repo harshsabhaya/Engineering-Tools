@@ -158,6 +158,7 @@ def Add_profile_view(request):
         p_form = add_profile_form(request.POST or None, request.FILES or None)
         if p_form.is_valid():
             profile_form = p_form.save(commit = False)
+            profile_form.c_email = request.session.get('company_details')
             profile_form.c_name = request.session.get('company_name')
             #print(c_name)
             profile_form.save()
@@ -170,4 +171,9 @@ def Add_profile_view(request):
 
 def Show_profile_view(request):
     temp = "Company/profile.html"
-    return render(request,temp)
+    email = request.session.get("company_details")
+    is_profile = Company_Profile.objects.filter(c_email__iexact=email).exists()
+    if is_profile:
+        data = Company_Profile.objects.get(c_email = email)
+        print(data.c_website)
+    return render(request,temp, {'data':data})

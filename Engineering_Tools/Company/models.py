@@ -27,6 +27,7 @@ class Register(models.Model):
 
 
 class Company_Profile(models.Model):
+    c_email = models.EmailField()
     c_name = models.CharField(max_length = 50)
     c_phone = models.CharField(max_length = 10)
     c_street = models.TextField()
