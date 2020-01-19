@@ -1,8 +1,8 @@
 {% extends 'Company/header_footer.html' %}
 {% load static %}
 {% load crispy_forms_tags %}
-{% block 'content' %}
 
+{% block 'content' %}
 
 <!-- Content Body Start -->
         <div class="content-body">
@@ -13,18 +13,12 @@
                 <!-- Page Heading Start -->
                 <div class="col-12 col-lg-auto mb-20">
                     <div class="page-heading">
-                        <h3>{{ request.session.company_name }}</h3>
+                        <h3>Edit Profile</h3>
                     </div>
                 </div><!-- Page Heading End -->
 
             </div><!-- Page Headings End -->
-
-            <div class="row mbn-50">
-                <!--Right Sidebar Start-->
-                <div class="col-xlg-12 col-12 mb-50">
-                    <div class="row mbn-30">
-
-                        <!--Author Information Start-->
+            <!--Author Information Start-->
                         <div class="col-xlg-12 col-lg-12 col-12 mb-30">
                             <div class="box">
                                 <div class="box-body">
@@ -32,6 +26,8 @@
                                         <form method="post" enctype="multipart/form-data" >
                                             {% csrf_token %}
                                             <div class="row row-10 mbn-20">
+                                                <div class="col-sm-6 col-12 mb-20"> {{ p_form.c_email | as_crispy_field }} </div>
+                                                <div class="col-sm-6 col-12 mb-20"> {{ p_form.c_name | as_crispy_field }} </div>
                                                 <div class="col-sm-6 col-12 mb-20"> {{ p_form.c_phone | as_crispy_field }} </div>
                                                 <div class="col-sm-6 col-12 mb-20"> {{ p_form.c_logo | as_crispy_field }} </div>
                                                 <div class="col-sm-6 col-12 mb-20"> {{ p_form.c_street | as_crispy_field }} </div>
@@ -61,5 +57,6 @@
             </div>
 
         </div><!-- Content Body End -->
+
 
 {% endblock %}

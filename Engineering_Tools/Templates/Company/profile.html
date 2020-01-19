@@ -6,8 +6,6 @@
 
 <!-- Content Body Start -->
         <div class="content-body">
-
-
                 <!-- Page Heading Start -->
                 <div class="col-12 col-lg-auto mb-20">
                     <div class="page-heading">
@@ -20,27 +18,33 @@
                                         </div>
                                         <div class="info">
                                             <h3>{{ request.session.company_name }}</h3>
+
                                         </div>
+
                                     </div>
+
                                 </div>
+
                             </div>
+
                         </div>
+
                     </div><!-- Page Heading End -->
+
                 </div><!-- Page Headings End -->
 
             <div class="row mbn-50">
                 <!--Right Sidebar Start-->
                 <div class="col-xlg-12 col-12 mb-50">
                     <div class="row mbn-30">
-
                         <!--Author Information Start-->
                         <div class="col-xlg-12 col-lg-12 col-12 mb-30">
                             <div class="box">
                                 <div class="box-body">
                                     <div class="form">
                                             <div class="row row-10 mbn-20">
-
-                                                <div class="col-sm-12 col-12 mb-20"> <h4>Personal Details: </h4></div>
+                                                <div class="col-sm-6 col-12 mb-20"> <h4>Personal Details: </h4></div>
+                                                <div class="col-sm-6 col-12 mb-20"> <a  style="float:right" href="{% url 'Company:Edit_profile' data.id %}" > <h4>Edit Profile </h4></a></div>
                                                 <div class="col-sm-6 col-12 mb-20"> Name: <input type="text" readonly value="{{ data.c_email }}" class="form-control" /> </div>
                                                 <div class="col-sm-6 col-12 mb-20"> Phone: <input type="text" readonly value="{{ data.c_phone }}" class="form-control" /> </div>
 

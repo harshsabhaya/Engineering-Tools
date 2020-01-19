@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.conf import settings
 from django.core.mail import send_mail
@@ -6,7 +6,7 @@ import random
 
 
 from .models import Register, Company_Profile
-from .forms import register_form, login_form, forgot_password_form, otp_match_form, add_new_password_form, add_profile_form
+from .forms import register_form, login_form, forgot_password_form, otp_match_form, add_new_password_form, add_profile_form, edit_profile_form
 
 
 # Create your views here.
@@ -177,3 +177,12 @@ def Show_profile_view(request):
         data = Company_Profile.objects.get(c_email = email)
         print(data.c_website)
     return render(request,temp, {'data':data})
+
+
+def Edit_profile_view(request, pk):
+    temp = "Company/edit_profile.html"
+    profile = get_object_or_404(Company_Profile,pk=pk)
+    form = edit_profile_form(request.POST or None, request.FILES or None, instance=profile)
+    if form.is_valid():
+        form.save()
+    return render(request,temp, {'p_form':form})
