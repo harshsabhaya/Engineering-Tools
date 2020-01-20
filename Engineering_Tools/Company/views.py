@@ -13,8 +13,7 @@ from .forms import register_form, login_form, forgot_password_form, otp_match_fo
 def Home_View_Company(request):
     temp ="Company/index.html"
 
-    email = request.session.get('company_details')
-    if email == None:
+    if request.session.get('company_user') == None:
         return redirect("Company:Login")
 
     return render(request, temp)
@@ -27,32 +26,47 @@ def Register_view(request):
         r_form = register_form(request.POST or None, request.FILES or None)
         if r_form.is_valid():
             register = r_form.save(commit = False)
+            name = request.POST.get('c_name')
+            email = request.POST.get('c_email')
             password = request.POST.get('c_password')
             c_password = request.POST.get('c_r_password')
             if (password == c_password):
                 register.save()
-
-                data = Register.objects.get(c_email=request.POST.get('c_email'))
-                company = {'name': data.c_name, 'email': data.c_name}
-                request.session["company"] = company
-                request.session["company_details"] = data.c_email
-                request.session["company_name"] = data.c_name
-                #Company_Profile.objects.create(c_name = request.POST.get('c_name'))
-
-                #email for welcome
+                request.session["company_email"] = email
+                # email for welcome
                 subject = "Sahil Rajput, Engineering Tools"
-                message = "Hello, " + data.c_name + ". Welcome To Engineering Tools :) :)"
+                message = "Hello, " + name + ". Welcome To Engineering Tools. Please Verify Your Email ID ::--> http://127.0.0.1:8000/Company/Verification"
                 email_from = settings.EMAIL_HOST_USER
-                email_to = [data.c_email,]
-                send_mail(subject,message,email_from,email_to)
-                #email logic complate
+                email_to = [email, ]
+                send_mail(subject, message, email_from, email_to)
+                # email logic complate
 
-                return redirect('Company:Home')
+                return redirect('Company:Please_verify')
     else:
         messages.error(request, 'Please Correct the error below.')
         r_form = register_form()
 
     return render(request, temp, {'register_form':r_form})
+
+
+def Please_verify_view(request):
+    temp = "Company/please_verify.html"
+    return render(request,temp)
+
+
+def Account_verification_view(request):
+    temp = "Company/verification.html"
+    email = request.session.get("company_email")
+    Register.objects.filter(c_email = email).update(c_verification_flag = 1)
+
+    data = Register.objects.get(c_email=email)
+    company = {'name': data.c_name, 'email': data.c_name}
+    request.session["company_user"] = company
+
+    if(data.c_verification_flag == True):
+        return redirect('Company:Home')
+
+    return render(request,temp)
 
 
 
@@ -63,19 +77,17 @@ def Login_view(request):
         if l_form.is_valid():
             email = request.POST.get('c_email')
             password = request.POST.get('c_password')
-            print(email + " " + password)
+            #print(email + " " + password)
             is_email = Register.objects.filter(c_email__iexact=email).exists()
             is_pass = Register.objects.filter(c_password__iexact=password).exists()
-            print(is_email)
-            print(is_pass)
+            #print(is_email)
+            #print(is_pass)
             if is_email and is_pass:
                 data = Register.objects.get(c_email=email)
                 if (data.c_password == password):
-                    print(data.c_password)
+                    #print(data.c_password)
                     company = {'name': data.c_name, 'email': data.c_name}
                     request.session["company"] = company
-                    request.session["company_details"] = data.c_email
-                    request.session["company_name"] = data.c_name
                     return redirect('Company:Home')
     else:
         l_form = login_form()
@@ -86,7 +98,7 @@ def Login_view(request):
 
 def Logout_view(request):
     temp = "Company/logout.html"
-    if(request.session.get("company_details") != None):
+    if(request.session.get("company_user") != None):
         request.session.delete()
     else:
         return redirect('Company:Login')

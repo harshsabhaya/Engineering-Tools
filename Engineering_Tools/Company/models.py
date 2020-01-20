@@ -21,6 +21,7 @@ class Register(models.Model):
     c_email = models.EmailField()
     c_password = models.CharField(max_length = 16)
     c_r_password = models.CharField(max_length = 16)
+    c_verification_flag = models.BooleanField()
 
     def __str__(self):
         return self.c_name
