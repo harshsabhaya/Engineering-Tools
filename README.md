@@ -15,3 +15,8 @@
 - Profile Edit Done -- At Seller Side
 
 - Code Reduction in Header-Footer HTML -- At Seller Side
+
+
+## Bug
+
+- Logical bug in page request (Verification and logout -- identified)
