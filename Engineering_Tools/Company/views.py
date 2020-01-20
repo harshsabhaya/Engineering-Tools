@@ -31,7 +31,10 @@ def Register_view(request):
             c_password = request.POST.get('c_r_password')
             if (password == c_password):
                 register.save()
+
                 data = Register.objects.get(c_email=request.POST.get('c_email'))
+                company = {'name': data.c_name, 'email': data.c_name}
+                request.session["company"] = company
                 request.session["company_details"] = data.c_email
                 request.session["company_name"] = data.c_name
                 #Company_Profile.objects.create(c_name = request.POST.get('c_name'))
@@ -69,6 +72,8 @@ def Login_view(request):
                 data = Register.objects.get(c_email=email)
                 if (data.c_password == password):
                     print(data.c_password)
+                    company = {'name': data.c_name, 'email': data.c_name}
+                    request.session["company"] = company
                     request.session["company_details"] = data.c_email
                     request.session["company_name"] = data.c_name
                     return redirect('Company:Home')
