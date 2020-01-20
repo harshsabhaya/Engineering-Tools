@@ -13,3 +13,5 @@
 - Profile View Done -- At Seller Side
 
 - Profile Edit Done -- At Seller Side
+
+- Code Reduction in Header-Footer HTML -- At Seller Side
