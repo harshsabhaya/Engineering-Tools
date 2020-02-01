@@ -16,6 +16,10 @@
 
 - Code Reduction in Header-Footer HTML -- At Seller Side
 
+- Product Catagory -- Model Created - With DB
+
+- Product -- Model Created
+
 
 ## Bug
 
