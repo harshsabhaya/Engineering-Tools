@@ -19,7 +19,6 @@ def Home_View_Company(request):
     return render(request, temp)
 
 
-
 def Register_view(request):
     temp = "Company/register.html"
     if request.method == 'POST':
@@ -33,6 +32,7 @@ def Register_view(request):
             if (password == c_password):
                 register.save()
                 request.session["company_email"] = email
+                request.session["company_name"] = name
                 # email for welcome
                 subject = "Sahil Rajput, Engineering Tools"
                 message = "Hello, " + name + ". Welcome To Engineering Tools. Please Verify Your Email ID ::--> http://127.0.0.1:8000/Company/Verification"
@@ -69,7 +69,6 @@ def Account_verification_view(request):
     return render(request,temp)
 
 
-
 def Login_view(request):
     temp = "Company/login.html"
     if request.method == 'POST':
@@ -95,7 +94,6 @@ def Login_view(request):
     return render(request, temp, {'login_form':l_form})
 
 
-
 def Logout_view(request):
     temp = "Company/logout.html"
     if(request.session.get("company_user") != None):
@@ -104,7 +102,6 @@ def Logout_view(request):
         return redirect('Company:Login')
 
     return render(request,temp,{})
-
 
 
 def Forgot_password(request):
@@ -168,14 +165,13 @@ def Add_new_password(request):
     return render(request,temp, {'form':add_password_form})
 
 
-
 def Add_profile_view(request):
     temp = "Company/add_profile.html"
     if request.method == 'POST':
         p_form = add_profile_form(request.POST or None, request.FILES or None)
         if p_form.is_valid():
             profile_form = p_form.save(commit = False)
-            profile_form.c_email = request.session.get('company_details')
+            profile_form.c_email = request.session.get('company_email')
             profile_form.c_name = request.session.get('company_name')
             #print(c_name)
             profile_form.save()
@@ -188,7 +184,7 @@ def Add_profile_view(request):
 
 def Show_profile_view(request):
     temp = "Company/profile.html"
-    email = request.session.get("company_details")
+    email = request.session.get("company_email")
     is_profile = Company_Profile.objects.filter(c_email__iexact=email).exists()
     if is_profile:
         data = Company_Profile.objects.get(c_email = email)
@@ -202,4 +198,5 @@ def Edit_profile_view(request, pk):
     form = edit_profile_form(request.POST or None, request.FILES or None, instance=profile)
     if form.is_valid():
         form.save()
+        return redirect("Company:Show_profile")
     return render(request,temp, {'p_form':form})

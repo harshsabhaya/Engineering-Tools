@@ -13,48 +13,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Engineering_Tools/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="138" column="16" lean-forward="true" selection-start-line="138" selection-start-column="16" selection-end-line="138" selection-end-column="16" />
+            <state relative-caret-position="410">
+              <caret line="137" column="48" selection-start-line="137" selection-start-column="48" selection-end-line="137" selection-end-column="48" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Company/views.py">
+        <entry file="file://$PROJECT_DIR$/Company/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-930">
-              <caret line="135" selection-start-line="135" selection-end-line="135" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Templates/Company/verification.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-244">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
-              <folding>
-                <element signature="e#1056#1062#0" expanded="true" />
-                <element signature="e#1068#1074#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Templates/Company/header_footer.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="2" column="44" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Company/urls_company.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="8" column="70" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="70" />
+            <state relative-caret-position="260">
+              <caret line="69" column="4" selection-start-line="69" selection-start-column="4" selection-end-line="69" selection-end-column="4" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -63,24 +32,34 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Templates/Company/please_verify.html">
+        <entry file="file://$PROJECT_DIR$/Company/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="860">
-              <caret line="43" column="14" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="14" />
+            <state relative-caret-position="140">
+              <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Templates/Company/logout.html">
+        <entry file="file://$PROJECT_DIR$/Company/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+            <state relative-caret-position="436">
+              <caret line="200" column="45" selection-start-line="200" selection-start-column="45" selection-end-line="200" selection-end-column="45" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#center#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#p#0;n#form#0;n#div#0;n#center#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#center#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#442#596#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Templates/Company/header_footer.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="325" selection-start-line="325" selection-end-line="325" />
             </state>
           </provider>
         </entry>
@@ -129,8 +108,6 @@
         <option value="$PROJECT_DIR$/static/static/Company/js/main.js" />
         <option value="$PROJECT_DIR$/User/urls_user.py" />
         <option value="$PROJECT_DIR$/Templates/Company/common_for_accounts.html" />
-        <option value="$PROJECT_DIR$/Templates/Company/logout.html" />
-        <option value="$PROJECT_DIR$/Company/admin.py" />
         <option value="$PROJECT_DIR$/Templates/Company/set_password.html" />
         <option value="$PROJECT_DIR$/Templates/Company/forgot_password.html" />
         <option value="$PROJECT_DIR$/Templates/Company/enter_otp.html" />
@@ -145,19 +122,22 @@
         <option value="$PROJECT_DIR$/Templates/Company/profile.html" />
         <option value="$PROJECT_DIR$/Company/forms.py" />
         <option value="$PROJECT_DIR$/Templates/Company/varification.html" />
-        <option value="$PROJECT_DIR$/Company/models.py" />
         <option value="$PROJECT_DIR$/Templates/Company/verification.html" />
-        <option value="$PROJECT_DIR$/Company/urls_company.py" />
         <option value="$PROJECT_DIR$/Templates/Company/please_verify.html" />
-        <option value="$PROJECT_DIR$/Templates/Company/header_footer.html" />
+        <option value="$PROJECT_DIR$/Templates/Company/logout.html" />
+        <option value="$PROJECT_DIR$/Company/urls_company.py" />
         <option value="$PROJECT_DIR$/Company/views.py" />
+        <option value="$PROJECT_DIR$/Templates/Company/header_footer.html" />
+        <option value="$PROJECT_DIR$/Company/admin.py" />
+        <option value="$PROJECT_DIR$/Company/models.py" />
         <option value="$PROJECT_DIR$/Engineering_Tools/settings.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="1024" />
-    <option name="height" value="728" />
+    <option name="x" value="-7" />
+    <option name="width" value="777" />
+    <option name="height" value="745" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -243,7 +223,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.21502976" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.21130952" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
@@ -400,16 +380,6 @@
     <entry file="file://$PROJECT_DIR$/Company/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Company/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="10" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Engineering_Tools/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -497,44 +467,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Company/models.py">
+    <entry file="file://$PROJECT_DIR$/Templates/Company/verification.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="23" column="23" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="23" />
+        <state relative-caret-position="600">
+          <caret line="30" column="19" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#1056#1062#0" expanded="true" />
+            <element signature="e#1068#1074#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Templates/Company/header_footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="44" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Company/urls_company.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="8" column="70" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="70" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Templates/Company/please_verify.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="860">
-          <caret line="43" column="14" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Templates/Company/logout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+        <state relative-caret-position="200">
+          <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
           <folding>
             <element signature="n#style#0;n#div#0;n#center#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#p#0;n#form#0;n#div#0;n#center#0;n#div#0;n#!!top" expanded="true" />
@@ -543,28 +490,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Templates/Company/verification.html">
+    <entry file="file://$PROJECT_DIR$/Templates/Company/please_verify.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-244">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="250">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Company/urls_company.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="55" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="55" />
           <folding>
-            <element signature="e#1056#1062#0" expanded="true" />
-            <element signature="e#1068#1074#0" expanded="true" />
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Templates/Company/header_footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="325" selection-start-line="325" selection-end-line="325" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Company/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-930">
-          <caret line="135" selection-start-line="135" selection-end-line="135" />
+        <state relative-caret-position="436">
+          <caret line="200" column="45" selection-start-line="200" selection-start-column="45" selection-end-line="200" selection-end-column="45" />
+          <folding>
+            <element signature="e#442#596#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Company/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Company/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="69" column="4" selection-start-line="69" selection-start-column="4" selection-end-line="69" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Engineering_Tools/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="138" column="16" lean-forward="true" selection-start-line="138" selection-start-column="16" selection-end-line="138" selection-end-column="16" />
+        <state relative-caret-position="410">
+          <caret line="137" column="48" selection-start-line="137" selection-start-column="48" selection-end-line="137" selection-end-column="48" />
         </state>
       </provider>
     </entry>

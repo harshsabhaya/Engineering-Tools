@@ -46,3 +46,41 @@ class Company_Profile(models.Model):
 
 
 
+
+class Product_Catagory(models.Model):
+    catagory_name = models.CharField(max_length=20, unique=True)
+
+    def __str__(self):
+        return self.catagory_name
+
+
+
+class Product_Hardware(models.Model):
+    p_company_id = models.CharField(max_length = 20)
+    p_name = models.CharField(max_length = 50)
+    p_model_no = models.CharField(max_length = 20)
+    p_bio = models.TextField()
+    p_manufacturing_date = models.DateField()
+    p_img_1 = models.ImageField() #upload to path panding
+    p_img_2 = models.ImageField() #upload to path panding
+    p_img_3 = models.ImageField(null=True, blank=True) #upload to path panding
+    p_img_4 = models.ImageField(null=True, blank=True) #upload to path panding
+    p_img_5 = models.ImageField(null=True, blank=True) #upload to path panding
+    p_img_6 = models.ImageField(null=True, blank=True) #upload to path panding
+    p_catagory = models.ForeignKey(Product_Catagory, on_delete = models.CASCADE)
+    p_price = models.DecimalField(max_digits = 10, decimal_places = 2)
+    P_warranty = models.DecimalField(max_digits = 4, decimal_places = 2)
+    p_replace_time = models.CharField(max_length = 3)
+    p_document = models.FileField(null= True, blank= True) #upload to path panding
+    p_software_link = models.URLField(max_length = 200, null=True, blank= True)
+    p_feature_1 = models.CharField(max_length = 300)
+    p_feature_2 = models.CharField(max_length=300)
+    p_feature_3 = models.CharField(max_length=300, null=True, blank=True)
+    p_feature_4 = models.CharField(max_length=300, null=True, blank=True)
+    p_feature_5 = models.CharField(max_length=300, null=True, blank=True)
+    p_feature_6 = models.CharField(max_length=300, null=True, blank=True)
+    p_creation_date = models.DateTimeField(auto_now_add= True)
+    p_updated_date = models.DateTimeField(auto_now= True)
+
+    def __str__(self):
+        return self.p_name
