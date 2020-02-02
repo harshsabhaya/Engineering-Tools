@@ -6,7 +6,7 @@ import random
 
 
 from .models import Register, Company_Profile
-from .forms import register_form, login_form, forgot_password_form, otp_match_form, add_new_password_form, add_profile_form, edit_profile_form
+from .forms import register_form, login_form, forgot_password_form, otp_match_form, add_new_password_form, add_profile_form, edit_profile_form, Add_Hardware_product_form
 
 
 # Create your views here.
@@ -200,3 +200,9 @@ def Edit_profile_view(request, pk):
         form.save()
         return redirect("Company:Show_profile")
     return render(request,temp, {'p_form':form})
+
+
+def Product_Hardware_view(request):
+    temp = "Company/Add_Hardware_product.html"
+    form = Add_Hardware_product_form()
+    return render(request, temp, {"product_hardware_form":form})
