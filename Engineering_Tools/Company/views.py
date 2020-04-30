@@ -13,7 +13,7 @@ from .forms import register_form, login_form, forgot_password_form, otp_match_fo
 def Home_View_Company(request):
     temp ="Company/index.html"
 
-    if request.session.get('company_user') == None:
+    if request.session.get('company_register') == None:
         return redirect("Company:Login")
 
     return render(request, temp)
@@ -23,16 +23,18 @@ def Register_view(request):
     temp = "Company/register.html"
     if request.method == 'POST':
         r_form = register_form(request.POST or None, request.FILES or None)
+        print("In form")
         if r_form.is_valid():
+            print("form valid")
             register = r_form.save(commit = False)
             name = request.POST.get('c_name')
             email = request.POST.get('c_email')
             password = request.POST.get('c_password')
             c_password = request.POST.get('c_r_password')
             if (password == c_password):
+                print("password match")
                 register.save()
                 request.session["company_email"] = email
-                request.session["company_name"] = name
                 # email for welcome
                 subject = "Sahil Rajput, Engineering Tools"
                 message = "Hello, " + name + ". Welcome To Engineering Tools. Please Verify Your Email ID ::--> http://127.0.0.1:8000/Company/Verification"
@@ -60,8 +62,8 @@ def Account_verification_view(request):
     Register.objects.filter(c_email = email).update(c_verification_flag = 1)
 
     data = Register.objects.get(c_email=email)
-    company = {'name': data.c_name, 'email': data.c_name}
-    request.session["company_user"] = company
+    company = {'name': data.c_name, 'email': data.c_email}
+    request.session["company_register"] = company
 
     if(data.c_verification_flag == True):
         return redirect('Company:Home')
@@ -76,17 +78,17 @@ def Login_view(request):
         if l_form.is_valid():
             email = request.POST.get('c_email')
             password = request.POST.get('c_password')
-            #print(email + " " + password)
+            print(email + " " + password)
             is_email = Register.objects.filter(c_email__iexact=email).exists()
             is_pass = Register.objects.filter(c_password__iexact=password).exists()
-            #print(is_email)
-            #print(is_pass)
+            print(is_email)
+            print(is_pass)
             if is_email and is_pass:
                 data = Register.objects.get(c_email=email)
                 if (data.c_password == password):
-                    #print(data.c_password)
-                    company = {'name': data.c_name, 'email': data.c_name}
-                    request.session["company"] = company
+                    print(data.c_password)
+                    company = {'name': data.c_name, 'email': data.c_email}
+                    request.session["company_register"] = company
                     return redirect('Company:Home')
     else:
         l_form = login_form()
@@ -96,7 +98,7 @@ def Login_view(request):
 
 def Logout_view(request):
     temp = "Company/logout.html"
-    if(request.session.get("company_user") != None):
+    if(request.session.get("company_register") != None):
         request.session.delete()
     else:
         return redirect('Company:Login')
@@ -170,11 +172,15 @@ def Add_profile_view(request):
     if request.method == 'POST':
         p_form = add_profile_form(request.POST or None, request.FILES or None)
         if p_form.is_valid():
+            company = request.session.get("company_register")
+            email = company["email"]
+            name = company["name"]
             profile_form = p_form.save(commit = False)
-            profile_form.c_email = request.session.get('company_email')
-            profile_form.c_name = request.session.get('company_name')
-            #print(c_name)
+            profile_form.c_email = email
+            profile_form.c_name = name
             profile_form.save()
+            company_details = Company_Profile.objects.get(c_email = email)
+            request.session["company_id"] = company_details.id
             return redirect('Company:Home')
     else:
         p_form = add_profile_form()
@@ -188,7 +194,7 @@ def Show_profile_view(request):
     is_profile = Company_Profile.objects.filter(c_email__iexact=email).exists()
     if is_profile:
         data = Company_Profile.objects.get(c_email = email)
-        print(data.c_website)
+        #print(data.c_website)
     return render(request,temp, {'data':data})
 
 
@@ -204,5 +210,24 @@ def Edit_profile_view(request, pk):
 
 def Product_Hardware_view(request):
     temp = "Company/Add_Hardware_product.html"
-    form = Add_Hardware_product_form()
-    return render(request, temp, {"product_hardware_form":form})
+    if request.method == 'POST':
+        print("form post")
+        hardware_form = Add_Hardware_product_form(request.POST or None, request.FILES or None)
+        print(request.POST.get("p_name"))
+        print(request.POST.get("p_company_id"))
+        print(request.POST.get("p_manufacturing_date"))
+        print(request.POST.get("p_catagory"))
+        if hardware_form.is_valid():
+            print("is valid")
+            hardware_product_form = hardware_form.save(commit=False)
+            #hardware_product_form.p_company_id = 2 # this value needs to be dynamic
+
+            hardware_product_form.save()
+            print("form save")
+            return redirect("Company:Home") #needs to redirect at show hardware product page
+        else:
+            print("Form not valid")
+    else:
+        hardware_form = Add_Hardware_product_form()
+
+    return render(request, temp, {"product_hardware_form":hardware_form})

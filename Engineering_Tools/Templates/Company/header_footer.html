@@ -1,6 +1,6 @@
 {% load static %}
 {% load i18n %}
-{% with company=request.session.company_user %}
+{% with company=request.session.company_register %}
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -9,7 +9,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Adomx - Responsive Bootstrap 4 Admin Template</title>
+    <title>Engineering Tools</title>
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -40,6 +40,7 @@
     <!-- Custom Style CSS Only For Demo Purpose -->
     <link id="cus-style" rel="stylesheet" href="{% static 'Company/css/style-primary.css' %}">
 
+
 </head>
 
 
@@ -57,8 +58,8 @@
                     <!-- Header Logo (Header Left) Start -->
                     <div class="header-logo col-auto">
                         <a href="index.html">
-                            <img src="{% static 'Company/images/logo/logo.png' %}" alt="">
-                            <img src="{% static 'Company/images/logo/logo-light.png' %}" class="logo-light" alt="">
+                            <img src="{% static 'Company/images/logo/company_logo.png' %}" alt="">
+                            <img src="{% static 'Company/images/logo/company_logo.png' %}" class="logo-light" alt="">
                         </a>
                     </div><!-- Header Logo (Header Left) End -->
 
@@ -71,7 +72,7 @@
                                 <div class="row align-items-center">
 
                                     <!--Side Header Toggle-->
-                                    <div class="col-auto"><button class="side-header-toggle"><i class="zmdi zmdi-menu"></i></button></div>
+                                    <div style="margin-left:-50%" class="col-auto"><button class="side-header-toggle"><i class="zmdi zmdi-menu"></i></button></div>
 
                                     <!--Header Search-->
                                     <div class="col-auto">
@@ -269,8 +270,8 @@
                                         <!-- Dropdown -->
                                         <div class="adomx-dropdown-menu dropdown-menu-user">
                                             <div class="head">
-                                                <h5 class="name"><a href="#">Madison Howard</a></h5>
-                                                <a class="mail" href="#">mailnam@mail.com</a>
+                                                <h5 class="name"><a href="#">{{ company.name }}</a></h5>
+                                                <a class="mail" href="#">{{ company.email }}</a>
                                             </div>
                                             <div class="body">
                                                 <ul>

@@ -1,7 +1,6 @@
 {% extends 'Company/header_footer.html' %}
 {% load static %}
 {% load crispy_forms_tags %}
-
 {% block 'content' %}
 
 <!-- Content Body Start -->
@@ -14,12 +13,12 @@
                         <div class="col-xlg-12 col-lg-12 col-12 mb-30">
                             <div class="box">
                                 <div class="box-body">
-                                    <form method="post" enctype="multipart/form-data">
-
-                                    <div class="form">
+                                        <form method="POST" enctype="multipart/form-data">
+                                            {% csrf_token %}
+                                        <div class="form">
                                             <div class="row row-10 mbn-20">
-                                                <div class="col-sm-12 col-12 mb-20"><h4>Product Information: </h4></div>
-
+                                                <div class="col-sm-12 col-12 mb-20"><h4>Hardware Product Information: </h4></div>
+ <input type="hidden" name="p_company_id" value="10" >
                                                 <div class="col-sm-6 col-12 mb-20">{{ product_hardware_form.p_name | as_crispy_field }}</div>
                                                 <div class="col-sm-6 col-12 mb-20">{{ product_hardware_form.p_model_no | as_crispy_field }}</div>
                                                 <div class="col-sm-12 col-12 mb-20">{{ product_hardware_form.p_bio | as_crispy_field }}</div>
@@ -41,7 +40,11 @@
 
                                                 <div class="col-sm-12 col-12 mb-20"><br></div>
                                                 <div class="col-sm-12 col-12 mb-20"><h4>Product Documents: </h4></div>
-                                                <div class="col-sm-12 col-12 mb-20">{{ product_hardware_form.p_document | as_crispy_field }}</div>
+                                                <div class="col-sm-6 col-6 mb-20">{{ product_hardware_form.p_ppt | as_crispy_field }}</div>
+                                                <div class="col-sm-6 col-6 mb-20">{{ product_hardware_form.p_pdf | as_crispy_field }}</div>
+                                                <div class="col-sm-6 col-6 mb-20">{{ product_hardware_form.p_blog_link | as_crispy_field }}</div>
+                                                <div class="col-sm-6 col-6 mb-20">{{ product_hardware_form.p_youtube_link | as_crispy_field }}</div>
+
 
 
                                                 <div class="col-sm-12 col-12 mb-20"><br></div>

@@ -1,6 +1,10 @@
 from  django import forms
 from .models import Register, Company_Profile, Product_Hardware
 
+
+class DateInput(forms.DateInput):
+    input_type = 'Date'
+
 class register_form(forms.ModelForm):
     class Meta:
         model = Register
@@ -144,7 +148,7 @@ class Add_Hardware_product_form(forms.ModelForm):
             'p_name': forms.TextInput(attrs={'class': 'form-control'}),
             'p_model_no': forms.TextInput(attrs={'class': 'form-control'}),
             'p_bio': forms.TextInput(attrs={'class': 'form-control'}),
-            'p_manufacturing_date':forms.DateInput(attrs={'class':'form-control'}),
+            'p_manufacturing_date':DateInput(attrs={'class':'form-control'}),
             'p_catagory': forms.Select(attrs={'class':'form-control'}),
             'p_price': forms.NumberInput(attrs={'class':'form-control'}),
             'P_warranty': forms.NumberInput(attrs={'class':'form-control'}),
@@ -156,5 +160,7 @@ class Add_Hardware_product_form(forms.ModelForm):
             'p_feature_4': forms.TextInput(attrs={'class':'form-control'}),
             'p_feature_5': forms.TextInput(attrs={'class':'form-control'}),
             'p_feature_6': forms.TextInput(attrs={'class':'form-control'}),
+            'p_blog_link': forms.TextInput(attrs={'class': 'form-control'}),
+            'p_youtube_link': forms.TextInput(attrs={'class': 'form-control'}),
 
         }
