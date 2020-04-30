@@ -20,6 +20,7 @@
 
 - Product -- Model Created
 
+- View Process Complate for Add_Hardware_Product ( except DatePicker )
 
 ## Bug
 
