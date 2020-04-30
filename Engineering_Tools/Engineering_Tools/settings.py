@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'Home',
     'Company',
     'User',
-    'Site_Admin',
 ]
 
 MIDDLEWARE = [
