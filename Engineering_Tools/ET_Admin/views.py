@@ -21,6 +21,9 @@ def ET_login(request):
 
     return render(request,temp)
 
+def ET_logout(request):
+    temp = "ET_Admin/logout.html"
+    return render(request, temp)
 
 def ET_Home(request):
     temp = "ET_Admin/index.html"
