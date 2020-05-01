@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from Company.models import Company_Profile
+from Company.models import Company_Profile, Product_Catagory
 
 # Create your views here.
 def ET_login(request):
@@ -28,3 +28,8 @@ def ET_All_Company(request):
     temp = "ET_Admin/all_company.html"
     data = Company_Profile.objects.all()
     return render(request, temp, {'company':data})
+
+def ET_Product_Category(request):
+    temp = "ET_Admin/all_categories.html"
+    data = Product_Catagory.objects.all()
+    return render(request, temp, {'category':data})
