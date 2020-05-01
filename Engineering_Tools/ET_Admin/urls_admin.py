@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import ET_login, ET_Home, ET_All_Company, ET_Product_Category, ET_All_User, ET_All_Feedback, ET_logout, ET_logout_done
+from .views import ET_login, ET_Home, ET_All_Company, ET_Product_Category, ET_All_User, ET_All_Feedback, ET_logout, ET_logout_done, ET_All_Hardware
 app_name = 'Admin'
 
 urlpatterns = [
@@ -11,4 +11,5 @@ urlpatterns = [
     path('Categories/', ET_Product_Category, name="Admin_category"),
     path('Users', ET_All_User, name="Admin_user"),
     path('Feedbacks', ET_All_Feedback, name="Admin_feedback"),
+    path('Hardwares', ET_All_Hardware, name="Admin_hardware"),
 ]
