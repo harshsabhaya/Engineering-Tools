@@ -92,3 +92,12 @@ def ET_All_Hardware(request):
     temp = "ET_Admin/all_hardware.html"
     data = User.objects.all()
     return render(request, temp, {'user':data})
+
+
+
+def ET_All_Software(request):
+    if request.session.get('Admin') == None:
+        return redirect("Admin:Admin_login")
+    temp = "ET_Admin/all_software.html"
+    data = User.objects.all()
+    return render(request, temp, {'user':data})
