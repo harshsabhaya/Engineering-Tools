@@ -40,3 +40,8 @@ def ET_All_User(request):
     temp = "ET_Admin/all_user.html"
     data = User.objects.all()
     return render(request, temp, {'user':data})
+
+def ET_All_Feedback(request):
+    temp = "ET_Admin/all_feedback.html"
+    data = User.objects.all()
+    return render(request, temp, {'user':data})
