@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 from Company.models import Company_Profile, Product_Catagory
+from django.contrib.auth.models import User
+
 
 # Create your views here.
 def ET_login(request):
@@ -33,3 +35,8 @@ def ET_Product_Category(request):
     temp = "ET_Admin/all_categories.html"
     data = Product_Catagory.objects.all()
     return render(request, temp, {'category':data})
+
+def ET_All_User(request):
+    temp = "ET_Admin/all_user.html"
+    data = User.objects.all()
+    return render(request, temp, {'user':data})
