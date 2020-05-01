@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'Home',
     'Company',
     'User',
-
+    'ET_Admin',
 ]
 
 MIDDLEWARE = [
