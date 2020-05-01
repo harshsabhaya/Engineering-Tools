@@ -5,6 +5,8 @@ from django.contrib.auth.models import User
 
 # Create your views here.
 def ET_login(request):
+    if request.session.get('Admin') != None:
+        return redirect("Admin:Admin_home")
     temp = "ET_Admin/login.html"
     if request.method == "POST":
         username = request.POST.get('username')
@@ -25,6 +27,9 @@ def ET_login(request):
 
 
 def ET_logout(request):
+    if request.session.get('Admin') == None:
+        return redirect("Admin:Admin_login")
+
     temp = "ET_Admin/logout.html"
     return render(request, temp)
 
@@ -39,12 +44,16 @@ def ET_logout_done(request):
 
 
 def ET_Home(request):
+    if request.session.get('Admin') == None:
+        return redirect("Admin:Admin_login")
     temp = "ET_Admin/index.html"
     return render(request,temp)
 
 
 
 def ET_All_Company(request):
+    if request.session.get('Admin') == None:
+        return redirect("Admin:Admin_login")
     temp = "ET_Admin/all_company.html"
     data = Company_Profile.objects.all()
     return render(request, temp, {'company':data})
@@ -52,6 +61,8 @@ def ET_All_Company(request):
 
 
 def ET_Product_Category(request):
+    if request.session.get('Admin') == None:
+        return redirect("Admin:Admin_login")
     temp = "ET_Admin/all_categories.html"
     data = Product_Catagory.objects.all()
     return render(request, temp, {'category':data})
@@ -59,6 +70,8 @@ def ET_Product_Category(request):
 
 
 def ET_All_User(request):
+    if request.session.get('Admin') == None:
+        return redirect("Admin:Admin_login")
     temp = "ET_Admin/all_user.html"
     data = User.objects.all()
     return render(request, temp, {'user':data})
@@ -66,6 +79,8 @@ def ET_All_User(request):
 
 
 def ET_All_Feedback(request):
+    if request.session.get('Admin') == None:
+        return redirect("Admin:Admin_login")
     temp = "ET_Admin/all_feedback.html"
     data = User.objects.all()
     return render(request, temp, {'user':data})
