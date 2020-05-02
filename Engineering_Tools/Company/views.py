@@ -58,17 +58,19 @@ def Please_verify_view(request):
 
 def Account_verification_view(request):
     temp = "Company/verification.html"
+    return render(request,temp)
+
+
+def Account_verification_done(request):
     email = request.session.get("company_email")
-    Register.objects.filter(c_email = email).update(c_verification_flag = 1)
+    Register.objects.filter(c_email=email).update(c_verification_flag=1)
 
     data = Register.objects.get(c_email=email)
     company = {'name': data.c_name, 'email': data.c_email}
     request.session["company_register"] = company
 
-    if(data.c_verification_flag == True):
+    if (data.c_verification_flag == True):
         return redirect('Company:Home')
-
-    return render(request,temp)
 
 
 def Login_view(request):

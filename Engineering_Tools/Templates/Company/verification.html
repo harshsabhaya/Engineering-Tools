@@ -20,7 +20,7 @@
                             </div>
 
                             <div class="login-register-form">
-                                <form method="post">
+                                <form method="post" action="{% url 'Company:Verification_done' %}">
                                     {% csrf_token %}
                                     <div class="row">
                                         <div class="col-12 mt-10"><button class="button button-primary button-outline">&nbsp;Verify&nbsp;</button></div>

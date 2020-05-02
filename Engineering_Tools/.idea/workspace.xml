@@ -11,28 +11,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Templates/ET_Admin/all_hardware.html">
+        <entry file="file://$PROJECT_DIR$/Company/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="24" column="41" lean-forward="true" selection-end-line="75" selection-end-column="18" />
+            <state relative-caret-position="-380">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+              <folding>
+                <element signature="e#0#64#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Templates/ET_Admin/all_software.html">
+        <entry file="file://$PROJECT_DIR$/Company/urls_company.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="19" column="79" selection-start-line="19" selection-start-column="79" selection-end-line="19" selection-end-column="79" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ET_Admin/urls_admin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+            <state relative-caret-position="180">
+              <caret line="9" column="80" selection-start-line="9" selection-start-column="63" selection-end-line="9" selection-end-column="80" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -41,10 +35,14 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Templates/ET_Admin/header_footer.html">
+        <entry file="file://$PROJECT_DIR$/Templates/Company/verification.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="97" column="77" selection-start-line="97" selection-start-column="77" selection-end-line="97" selection-end-column="77" />
+            <state relative-caret-position="293">
+              <caret line="22" column="93" selection-start-line="22" selection-start-column="93" selection-end-line="22" selection-end-column="93" />
+              <folding>
+                <element signature="e#1056#1062#0" expanded="true" />
+                <element signature="e#1068#1074#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -52,8 +50,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ET_Admin/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="470">
-              <caret line="100" column="29" selection-start-line="100" selection-start-column="29" selection-end-line="100" selection-end-column="29" />
+            <state relative-caret-position="1230">
+              <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -113,18 +111,15 @@
         <option value="$PROJECT_DIR$/Company/migrations/0001_initial.py" />
         <option value="$PROJECT_DIR$/Templates/Company/edit_profile.html" />
         <option value="$PROJECT_DIR$/Templates/Company/varification.html" />
-        <option value="$PROJECT_DIR$/Templates/Company/verification.html" />
         <option value="$PROJECT_DIR$/Templates/Company/please_verify.html" />
         <option value="$PROJECT_DIR$/Templates/Company/logout.html" />
         <option value="$PROJECT_DIR$/Company/admin.py" />
-        <option value="$PROJECT_DIR$/Company/urls_company.py" />
         <option value="$PROJECT_DIR$/Templates/Company/Add_Hardware_product.html" />
         <option value="$PROJECT_DIR$/Company/forms.py" />
         <option value="$PROJECT_DIR$/Company/models.py" />
         <option value="$PROJECT_DIR$/Templates/Company/add_profile.html" />
         <option value="$PROJECT_DIR$/Templates/Company/common_for_accounts.html" />
         <option value="$PROJECT_DIR$/Templates/Company/header_footer.html" />
-        <option value="$PROJECT_DIR$/Company/views.py" />
         <option value="$PROJECT_DIR$/Templates/Company/profile.html" />
         <option value="$PROJECT_DIR$/Site_Admin/models.py" />
         <option value="$PROJECT_DIR$/Site_Admin/admin.py" />
@@ -149,6 +144,9 @@
         <option value="$PROJECT_DIR$/ET_Admin/views.py" />
         <option value="$PROJECT_DIR$/ET_Admin/urls_admin.py" />
         <option value="$PROJECT_DIR$/Templates/ET_Admin/header_footer.html" />
+        <option value="$PROJECT_DIR$/Company/views.py" />
+        <option value="$PROJECT_DIR$/Company/urls_company.py" />
+        <option value="$PROJECT_DIR$/Templates/Company/verification.html" />
       </list>
     </option>
   </component>
@@ -163,7 +161,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -174,6 +171,11 @@
             <path>
               <item name="Engineering_Tools" type="b2602c69:ProjectViewProjectNode" />
               <item name="Engineering_Tools" type="462c0819:PsiDirectoryNode" />
+              <item name="Company" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Engineering_Tools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Engineering_Tools" type="462c0819:PsiDirectoryNode" />
               <item name="ET_Admin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -185,12 +187,13 @@
               <item name="Engineering_Tools" type="b2602c69:ProjectViewProjectNode" />
               <item name="Engineering_Tools" type="462c0819:PsiDirectoryNode" />
               <item name="Templates" type="462c0819:PsiDirectoryNode" />
-              <item name="ET_Admin" type="462c0819:PsiDirectoryNode" />
+              <item name="Company" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -242,6 +245,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.21130952" />
@@ -297,17 +301,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="55" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Templates/Company/verification.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="30" column="19" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
-          <folding>
-            <element signature="e#1056#1062#0" expanded="true" />
-            <element signature="e#1068#1074#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -399,16 +392,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Company/urls_company.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="46" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Templates/Company/profile.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
@@ -476,16 +459,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Company/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Templates/ET_Admin/admin_index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
@@ -550,27 +523,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Templates/ET_Admin/all_hardware.html">
+    <entry file="file://$PROJECT_DIR$/Templates/ET_Admin/header_footer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="24" column="41" lean-forward="true" selection-end-line="75" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Templates/ET_Admin/all_software.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="19" column="79" selection-start-line="19" selection-start-column="79" selection-end-line="19" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ET_Admin/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="100" column="29" selection-start-line="100" selection-start-column="29" selection-end-line="100" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="301">
+          <caret line="97" column="77" selection-start-line="97" selection-start-column="77" selection-end-line="97" selection-end-column="77" />
         </state>
       </provider>
     </entry>
@@ -584,10 +540,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Templates/ET_Admin/header_footer.html">
+    <entry file="file://$PROJECT_DIR$/Templates/ET_Admin/all_software.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="97" column="77" selection-start-line="97" selection-start-column="77" selection-end-line="97" selection-end-column="77" />
+        <state relative-caret-position="270">
+          <caret line="19" column="79" selection-start-line="19" selection-start-column="79" selection-end-line="19" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Templates/ET_Admin/all_hardware.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="24" column="41" selection-end-line="75" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Company/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-380">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Company/urls_company.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="80" selection-start-line="9" selection-start-column="63" selection-end-line="9" selection-end-column="80" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ET_Admin/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1230">
+          <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Templates/Company/verification.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="22" column="93" selection-start-line="22" selection-start-column="93" selection-end-line="22" selection-end-column="93" />
+          <folding>
+            <element signature="e#1056#1062#0" expanded="true" />
+            <element signature="e#1068#1074#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

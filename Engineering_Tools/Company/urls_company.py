@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import Home_View_Company, Register_view, Login_view, Logout_view,Add_profile_view , Add_new_password, Forgot_password, Otp_match, Show_profile_view, Edit_profile_view, Account_verification_view, Please_verify_view, Product_Hardware_view
+from .views import Home_View_Company, Register_view, Login_view, Logout_view,Add_profile_view , Add_new_password, Forgot_password, Otp_match, Show_profile_view, Edit_profile_view, Account_verification_view, Please_verify_view, Product_Hardware_view, Account_verification_done
 app_name = "Company"
 
 urlpatterns = [
@@ -7,6 +7,7 @@ urlpatterns = [
     path('Register', Register_view, name="Register"),
     path('Verify', Please_verify_view, name="Please_verify"),
     path('Verification', Account_verification_view, name="Verification"),
+    path('Verification_done', Account_verification_done, name="Verification_done"),
     path('Login', Login_view , name="Login"),
     path('Logout', Logout_view , name="Logout"),
     path('Profile',Show_profile_view,name="Show_profile"),
