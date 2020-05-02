@@ -28,7 +28,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ET_Admin/urls_admin.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="280">
@@ -40,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Templates/ET_Admin/header_footer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="96" column="77" selection-start-line="96" selection-start-column="77" selection-end-line="96" selection-end-column="77" />
+            <state relative-caret-position="301">
+              <caret line="97" column="77" selection-start-line="97" selection-start-column="77" selection-end-line="97" selection-end-column="77" />
             </state>
           </provider>
         </entry>
@@ -145,10 +145,10 @@
         <option value="$PROJECT_DIR$/Templates/ET_Admin/all_feedback.html" />
         <option value="$PROJECT_DIR$/Templates/ET_Admin/logout.html" />
         <option value="$PROJECT_DIR$/Templates/ET_Admin/all_hardware.html" />
-        <option value="$PROJECT_DIR$/Templates/ET_Admin/header_footer.html" />
         <option value="$PROJECT_DIR$/Templates/ET_Admin/all_software.html" />
         <option value="$PROJECT_DIR$/ET_Admin/views.py" />
         <option value="$PROJECT_DIR$/ET_Admin/urls_admin.py" />
+        <option value="$PROJECT_DIR$/Templates/ET_Admin/header_footer.html" />
       </list>
     </option>
   </component>
@@ -242,7 +242,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.21130952" />
@@ -551,13 +550,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Templates/ET_Admin/header_footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="96" column="77" selection-start-line="96" selection-start-column="77" selection-end-line="96" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Templates/ET_Admin/all_hardware.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -589,6 +581,13 @@
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Templates/ET_Admin/header_footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="97" column="77" selection-start-line="97" selection-start-column="77" selection-end-line="97" selection-end-column="77" />
         </state>
       </provider>
     </entry>
