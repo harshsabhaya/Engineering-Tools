@@ -8,7 +8,7 @@
 
             <center>
                 <div class="col-12" style="margin-top:15%">
-                    <form method="post">
+                    <form method="post" action="{% url 'Company:Logout_done' %}">
                         {% csrf_token  %}
                         <p>Are You Sure, <span style="color:red">You Want To Logout ?? </span></p>
                         <button class="form-control" style="width:15%;background-color:white" > Logout </button>

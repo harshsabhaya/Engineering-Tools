@@ -100,12 +100,15 @@ def Login_view(request):
 
 def Logout_view(request):
     temp = "Company/logout.html"
-    if(request.session.get("company_register") != None):
+    return render(request,temp,{})
+
+
+def Logout_done(request):
+    if (request.session.get("company_register") != None):
         request.session.delete()
+        return redirect('Company:Login')
     else:
         return redirect('Company:Login')
-
-    return render(request,temp,{})
 
 
 def Forgot_password(request):
