@@ -39,14 +39,16 @@
                                                             {% if redirect_field_value %}
                                                                 <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                                                             {% endif %}
-                                                        <button style="width:100%; border-radius:5px;" type="submit" class="btn btn-primary"><span>Register</span></button>
+                                                        <button style="width:100%; border-radius:5px;" type="submit" class="btn btn-primary"><span>SUBMIT</span></button>
                                                     </div>
                                                     <div class="col-md-6">
-                                                        <button style="width:100%; border-radius:5px;" type="reset" class="btn btn-danger"><span>Register</span></button>
+                                                        <button style="width:100%; border-radius:5px;" type="reset" class="btn btn-danger"><span>RESET</span></button>
                                                     </div>
 
                                                 </div>
                                             </form>
+                                            <br>
+                                            <p style="color:black">If You Already Have Account, <a style="color:blue;" href="{{ login_url }}">Please Login</a> ... </p>
                                         </div>
                                     </div>
                                 </div>
