@@ -10,11 +10,66 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Engineering_Tools/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="470">
-              <caret line="179" column="23" lean-forward="true" selection-start-line="179" selection-start-column="23" selection-end-line="179" selection-end-column="23" />
+              <caret line="179" column="23" selection-start-line="179" selection-start-column="23" selection-end-line="179" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Templates/account/email_confirm.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="219">
+              <caret line="39" column="40" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Templates/account/logout.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="416">
+              <caret line="51" column="8" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Templates/account/signup.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="11" column="54" selection-end-line="59" selection-end-column="14" />
+              <folding>
+                <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Templates/account/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="410">
+              <caret line="33" column="85" selection-start-line="33" selection-start-column="85" selection-end-line="33" selection-end-column="85" />
+              <folding>
+                <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Templates/account/comman_for_accounts.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="20">
+              <caret line="453" lean-forward="true" selection-start-line="453" selection-end-line="453" />
             </state>
           </provider>
         </entry>
@@ -46,9 +101,9 @@
       <find>url</find>
       <find>company</find>
       <find>company.</find>
-      <find>href</find>
-      <find>src</find>
       <find>logo</find>
+      <find>src</find>
+      <find>href</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -58,10 +113,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Templates/Company/forgot_password.html" />
-        <option value="$PROJECT_DIR$/Templates/Company/enter_otp.html" />
-        <option value="$PROJECT_DIR$/Templates/Company/Add_new_password.html" />
-        <option value="$PROJECT_DIR$/Templates/Company/login.html" />
         <option value="$PROJECT_DIR$/Templates/Company/register.html" />
         <option value="$PROJECT_DIR$/Templates/Company/index.html" />
         <option value="$PROJECT_DIR$/Company/migrations/0001_initial.py" />
@@ -104,11 +155,15 @@
         <option value="$PROJECT_DIR$/Engineering_Tools/urls.py" />
         <option value="$PROJECT_DIR$/Templates/account/header_custom.html" />
         <option value="$PROJECT_DIR$/Templates/account/footer_custom.html" />
-        <option value="$PROJECT_DIR$/Templates/account/verification_sent.html" />
-        <option value="$PROJECT_DIR$/Templates/account/email_confirm.html" />
-        <option value="$PROJECT_DIR$/Templates/account/signup.html" />
-        <option value="$PROJECT_DIR$/Templates/account/login.html" />
         <option value="$PROJECT_DIR$/Engineering_Tools/settings.py" />
+        <option value="$PROJECT_DIR$/Templates/accounts/signup.html" />
+        <option value="$PROJECT_DIR$/Templates/accounts/comman_for_accounts.html" />
+        <option value="$PROJECT_DIR$/Templates/account/signup.html" />
+        <option value="$PROJECT_DIR$/Templates/account/comman_for_accounts.html" />
+        <option value="$PROJECT_DIR$/Templates/account/verification_sent.html" />
+        <option value="$PROJECT_DIR$/Templates/account/login.html" />
+        <option value="$PROJECT_DIR$/Templates/account/email_confirm.html" />
+        <option value="$PROJECT_DIR$/Templates/account/logout.html" />
       </list>
     </option>
   </component>
@@ -136,6 +191,12 @@
               <item name="Engineering_Tools" type="462c0819:PsiDirectoryNode" />
               <item name="Templates" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Engineering_Tools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Engineering_Tools" type="462c0819:PsiDirectoryNode" />
+              <item name="Templates" type="462c0819:PsiDirectoryNode" />
+              <item name="account" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -148,11 +209,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\FINAL_YEAR_PROJECT\EngineeringTools\Engineering_Tools\Templates\account" />
+      <recent name="G:\FINAL_YEAR_PROJECT\EngineeringTools\Engineering_Tools\Templates\accounts" />
       <recent name="G:\FINAL_YEAR_PROJECT\EngineeringTools\Engineering_Tools\static\static\User" />
       <recent name="G:\FINAL_YEAR_PROJECT\EngineeringTools\Engineering_Tools\Templates" />
       <recent name="G:\FINAL_YEAR_PROJECT\EngineeringTools\Engineering_Tools\Templates\ET_Admin" />
-      <recent name="G:\FINAL_YEAR_PROJECT\EngineeringTools\Engineering_Tools\static\static\Admin" />
-      <recent name="G:\FINAL_YEAR_PROJECT\EngineeringTools\Engineering_Tools\Templates\Admin" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -213,34 +274,6 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Company/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Templates/Company/edit_profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="42" column="130" selection-start-line="42" selection-start-column="52" selection-end-line="42" selection-end-column="130" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/media/Company/None_394.jpg" />
-    <entry file="file://$PROJECT_DIR$/Company/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Templates/Company/Add_Hardware_product.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -252,13 +285,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="940">
           <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Templates/Company/common_for_accounts.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -520,24 +546,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Templates/account/verification_sent.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#p#1;n#center#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Templates/account/email_confirm.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="69" selection-start-line="8" selection-start-column="69" selection-end-line="8" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Templates/account/signup.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -548,17 +556,76 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Templates/Company/common_for_accounts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="50" lean-forward="true" selection-start-line="46" selection-end-line="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Templates/Company/forgot_password.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Templates/account/comman_for_accounts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="453" lean-forward="true" selection-start-line="453" selection-end-line="453" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Templates/account/verification_sent.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="28" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Templates/account/signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="54" selection-end-line="59" selection-end-column="14" />
+          <folding>
+            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Templates/account/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="35" column="3" lean-forward="true" selection-start-line="33" selection-start-column="47" selection-end-line="35" selection-end-column="3" />
+        <state relative-caret-position="410">
+          <caret line="33" column="85" selection-start-line="33" selection-start-column="85" selection-end-line="33" selection-end-column="85" />
+          <folding>
+            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Engineering_Tools/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="470">
-          <caret line="179" column="23" lean-forward="true" selection-start-line="179" selection-start-column="23" selection-end-line="179" selection-end-column="23" />
+          <caret line="179" column="23" selection-start-line="179" selection-start-column="23" selection-end-line="179" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Templates/account/email_confirm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="39" column="40" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Templates/account/logout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="51" column="8" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
         </state>
       </provider>
     </entry>
