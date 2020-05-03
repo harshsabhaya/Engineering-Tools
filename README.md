@@ -7,4 +7,3 @@
 - Feedback Data Pending :: Admin Side
 - Hardware Data Pending :: Admin Side
 - Software Data Pending :: Admin Side
-- Authentication Design Pending :: User Side
