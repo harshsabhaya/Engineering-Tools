@@ -332,7 +332,7 @@
 
                           <li class="has-sub-menu"><a href="#"><i class="ti-package"></i> <span>All Products</span></a>
                             <ul class="side-header-sub-menu">
-                                <li><a href="#"><span> Hardware Product</span></a></li>
+                                <li><a href="{% url 'Company:All_Hardware_product' %}"><span> Hardware Product</span></a></li>
                                 <li><a href="#"><span> Software Product</span></a></li>
                             </ul>
                         </li>
@@ -371,10 +371,11 @@
     <script src="{% static 'Company/js/vendor/bootstrap.min.js' %}"></script>
     <!--Plugins JS-->
     <script src="{% static 'Company/js/plugins/perfect-scrollbar.min.js' %}"></script>
+    <script src="{% static 'Company/js/plugins/datatables/datatables.min.js' %}"></script>
+    <script src="{% static 'Company/js/plugins/datatables/datatables.active.js' %}"></script>
+
     <!--Main JS-->
     <script src="{% static 'Company/js/main.js' %}"></script>
-
-    <!-- Plugins & Activation JS For Only This Page -->
 
     <!--Moment-->
     <script src="{% static 'Company/js/plugins/moment/moment.min.js' %}"></script>

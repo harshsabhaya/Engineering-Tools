@@ -19,5 +19,6 @@ urlpatterns = [
     path('Enter_otp', Otp_match, name="Enter_otp" ),
     path('Add_hardware_product', Product_Hardware_view, name="Add_Hardware_product"),
     path('Add_software_product', Product_Software_view, name="Add_Software_product"),
+    path('All_hardware_product', All_Hardware_product_view, name="All_Hardware_product"),
 
 ]
