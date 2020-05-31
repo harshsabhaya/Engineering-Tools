@@ -5,7 +5,7 @@ from django.core.mail import send_mail
 import random
 
 
-from .models import Register, Company_Profile
+from .models import Register, Company_Profile, Product_software, Product_Hardware
 from .forms import register_form, login_form, forgot_password_form, otp_match_form, add_new_password_form, add_profile_form, edit_profile_form, Add_Hardware_product_form, Add_Software_product_form
 
 
@@ -258,8 +258,10 @@ def Product_Software_view(request):
 
 def All_Hardware_product_view(request):
     temp = "Company/all_hardware.html"
-    return render(request,temp)
+    data = Product_Hardware.objects.all()
+    return render(request, temp, {"data":data})
 
 def All_Software_product_view(request):
     temp = "Company/all_software.html"
-    return render(request, temp)
+    data = Product_software.objects.all()
+    return render(request, temp, {"data":data})
