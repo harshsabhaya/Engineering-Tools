@@ -1,5 +1,5 @@
 from  django import forms
-from .models import Register, Company_Profile, Product_Hardware
+from .models import Register, Company_Profile, Product_Hardware, Product_software
 
 
 class DateInput(forms.DateInput):
@@ -162,5 +162,26 @@ class Add_Hardware_product_form(forms.ModelForm):
             'p_feature_6': forms.TextInput(attrs={'class':'form-control'}),
             'p_blog_link': forms.TextInput(attrs={'class': 'form-control'}),
             'p_youtube_link': forms.TextInput(attrs={'class': 'form-control'}),
+
+        }
+
+
+
+
+class Add_Software_product_form(forms.ModelForm):
+    class Meta:
+        model = Product_software
+        fields = "__all__"
+
+        widgets = {
+            'software_name': forms.TextInput(attrs={'class': 'form-control'}),
+            'hardware_product': forms.Select(attrs={'class':'form-control'}),
+            'software_link': forms.TextInput(attrs={'class':'form-control'}),
+            'youtube_link': forms.TextInput(attrs={'class':'form-control'}),
+            'p_feature_1': forms.TextInput(attrs={'class':'form-control'}),
+            'p_feature_2': forms.TextInput(attrs={'class':'form-control'}),
+            'p_feature_3': forms.TextInput(attrs={'class':'form-control'}),
+            'p_feature_4': forms.TextInput(attrs={'class':'form-control'}),
+            'p_feature_5': forms.TextInput(attrs={'class':'form-control'}),
 
         }

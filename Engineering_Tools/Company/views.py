@@ -6,7 +6,7 @@ import random
 
 
 from .models import Register, Company_Profile
-from .forms import register_form, login_form, forgot_password_form, otp_match_form, add_new_password_form, add_profile_form, edit_profile_form, Add_Hardware_product_form
+from .forms import register_form, login_form, forgot_password_form, otp_match_form, add_new_password_form, add_profile_form, edit_profile_form, Add_Hardware_product_form, Add_Software_product_form
 
 
 # Create your views here.
@@ -195,11 +195,12 @@ def Add_profile_view(request):
 
 def Show_profile_view(request):
     temp = "Company/profile.html"
-    email = request.session.get("company_email")
+    company = request.session.get("company_register")
+    email = company['email']
     is_profile = Company_Profile.objects.filter(c_email__iexact=email).exists()
+    print(is_profile)
     if is_profile:
         data = Company_Profile.objects.get(c_email = email)
-        #print(data.c_website)
     return render(request,temp, {'data':data})
 
 
@@ -236,3 +237,25 @@ def Product_Hardware_view(request):
         hardware_form = Add_Hardware_product_form()
 
     return render(request, temp, {"product_hardware_form":hardware_form})
+
+
+def Product_Software_view(request):
+    temp = "Company/Add_Software_product.html"
+
+    if request.method == "POST":
+        software_form = Add_Software_product_form(request.POST or None, request.FILES or None)
+        if software_form.is_valid():
+            software_product_form = software_form.save(commit = False)
+            software_product_form.save()
+            return redirect("Company:Home")
+        else:
+            print("Form Not Valid")
+    else:
+        software_form = Add_Software_product_form()
+    return render(request, temp, {"product_software_form":software_form})
+
+
+
+def All_Hardware_product_view(request):
+    temp = "Company/all_hardware.html"
+    return render(request,temp)

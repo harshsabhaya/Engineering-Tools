@@ -121,3 +121,20 @@ class Product_Hardware(models.Model):
 
     def __str__(self):
         return self.p_name
+
+
+
+class Product_software(models.Model):
+    software_name = models.CharField(max_length = 50)
+    hardware_product  = models.ForeignKey(Product_Hardware, on_delete=models.CASCADE)
+    software_link = models.URLField()
+    youtube_link = models.URLField()
+    p_feature_1 = models.CharField(max_length=300)
+    p_feature_2 = models.CharField(max_length=300)
+    p_feature_3 = models.CharField(max_length=300, null=True, blank=True)
+    p_feature_4 = models.CharField(max_length=300, null=True, blank=True)
+    p_feature_5 = models.CharField(max_length=300, null=True, blank=True)
+
+
+    def __str__(self):
+        return  self.software_name
