@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import Home_View_Company, Register_view, Login_view, Logout_view,Add_profile_view , Add_new_password, Forgot_password, Otp_match, Show_profile_view, Edit_profile_view, Account_verification_view, Please_verify_view, Product_Hardware_view, Account_verification_done, Logout_done, Product_Software_view, All_Hardware_product_view
+from .views import Home_View_Company, Register_view, Login_view, Logout_view,Add_profile_view , Add_new_password, Forgot_password, Otp_match, Show_profile_view, Edit_profile_view, Account_verification_view, Please_verify_view, Product_Hardware_view, Account_verification_done, Logout_done, Product_Software_view, All_Hardware_product_view, All_Software_product_view
 app_name = "Company"
 
 urlpatterns = [
@@ -20,5 +20,6 @@ urlpatterns = [
     path('Add_hardware_product', Product_Hardware_view, name="Add_Hardware_product"),
     path('Add_software_product', Product_Software_view, name="Add_Software_product"),
     path('All_hardware_product', All_Hardware_product_view, name="All_Hardware_product"),
+    path('All_software_product', All_Software_product_view, name="All_Software_product"),
 
 ]

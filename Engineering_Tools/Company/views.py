@@ -259,3 +259,7 @@ def Product_Software_view(request):
 def All_Hardware_product_view(request):
     temp = "Company/all_hardware.html"
     return render(request,temp)
+
+def All_Software_product_view(request):
+    temp = "Company/all_software.html"
+    return render(request, temp)
