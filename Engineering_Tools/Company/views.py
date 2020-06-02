@@ -99,6 +99,8 @@ def Login_view(request):
 
 
 def Logout_view(request):
+    if request.session.get('company_register') == None:
+        return redirect("Company:Login")
     temp = "Company/logout.html"
     return render(request,temp,{})
 
@@ -173,6 +175,8 @@ def Add_new_password(request):
 
 
 def Add_profile_view(request):
+    if request.session.get('company_register') == None:
+        return redirect("Company:Login")
     temp = "Company/add_profile.html"
     if request.method == 'POST':
         p_form = add_profile_form(request.POST or None, request.FILES or None)
@@ -192,6 +196,8 @@ def Add_profile_view(request):
 
 
 def Show_profile_view(request):
+    if request.session.get('company_register') == None:
+        return redirect("Company:Login")
     temp = "Company/profile.html"
     company = request.session.get("company_register")
     email = company['email']
@@ -203,6 +209,8 @@ def Show_profile_view(request):
 
 
 def Edit_profile_view(request, pk):
+    if request.session.get('company_register') == None:
+        return redirect("Company:Login")
     temp = "Company/edit_profile.html"
     profile = get_object_or_404(Company_Profile,pk=pk)
     form = edit_profile_form(request.POST or None, request.FILES or None, instance=profile)
@@ -213,6 +221,8 @@ def Edit_profile_view(request, pk):
 
 
 def Product_Hardware_view(request):
+    if request.session.get('company_register') == None:
+        return redirect("Company:Login")
     temp = "Company/Add_Hardware_product.html"
     if request.method == 'POST':
         hardware_form = Add_Hardware_product_form(request.POST or None, request.FILES or None)
@@ -232,6 +242,8 @@ def Product_Hardware_view(request):
 
 
 def Product_Software_view(request):
+    if request.session.get('company_register') == None:
+        return redirect("Company:Login")
     temp = "Company/Add_Software_product.html"
     if request.method == "POST":
         software_form = Add_Software_product_form(request.POST or None, request.FILES or None)
@@ -251,11 +263,15 @@ def Product_Software_view(request):
 
 
 def All_Hardware_product_view(request):
+    if request.session.get('company_register') == None:
+        return redirect("Company:Login")
     temp = "Company/all_hardware.html"
     data = Product_Hardware.objects.all()
     return render(request, temp, {"data":data})
 
 def All_Software_product_view(request):
+    if request.session.get('company_register') == None:
+        return redirect("Company:Login")
     temp = "Company/all_software.html"
     data = Product_software.objects.all()
     return render(request, temp, {"data":data})
