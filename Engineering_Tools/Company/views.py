@@ -222,7 +222,6 @@ def Product_Hardware_view(request):
             hardware_product_form = hardware_form.save(commit=False)
             hardware_product_form.p_company_id = company_id
             hardware_product_form.save()
-            print("form save")
             return redirect("Company:Home")
         else:
             print("Form not valid")
