@@ -66,7 +66,7 @@ def Account_verification_done(request):
     Register.objects.filter(c_email=email).update(c_verification_flag=1)
 
     data = Register.objects.get(c_email=email)
-    company = {'name': data.c_name, 'email': data.c_email}
+    company = {'name': data.c_name, 'email': data.c_email, 'id': data.id}
     request.session["company_register"] = company
 
     if (data.c_verification_flag == True):
@@ -89,7 +89,7 @@ def Login_view(request):
                 data = Register.objects.get(c_email=email)
                 if (data.c_password == password):
                     print(data.c_password)
-                    company = {'name': data.c_name, 'email': data.c_email}
+                    company = {'name': data.c_name, 'email': data.c_email, 'id': data.id}
                     request.session["company_register"] = company
                     return redirect('Company:Home')
     else:
@@ -184,8 +184,6 @@ def Add_profile_view(request):
             profile_form.c_email = email
             profile_form.c_name = name
             profile_form.save()
-            company_details = Company_Profile.objects.get(c_email = email)
-            request.session["company_id"] = company_details.id
             return redirect('Company:Home')
     else:
         p_form = add_profile_form()
@@ -217,20 +215,15 @@ def Edit_profile_view(request, pk):
 def Product_Hardware_view(request):
     temp = "Company/Add_Hardware_product.html"
     if request.method == 'POST':
-        print("form post")
         hardware_form = Add_Hardware_product_form(request.POST or None, request.FILES or None)
-        print(request.POST.get("p_name"))
-        print(request.POST.get("p_company_id"))
-        print(request.POST.get("p_manufacturing_date"))
-        print(request.POST.get("p_catagory"))
+        company = request.session.get("company_register")
+        company_id = company['id']
         if hardware_form.is_valid():
-            print("is valid")
             hardware_product_form = hardware_form.save(commit=False)
-            #hardware_product_form.p_company_id = 2 # this value needs to be dynamic
-
+            hardware_product_form.p_company_id = company_id
             hardware_product_form.save()
             print("form save")
-            return redirect("Company:Home") #needs to redirect at show hardware product page
+            return redirect("Company:Home")
         else:
             print("Form not valid")
     else:
@@ -241,11 +234,13 @@ def Product_Hardware_view(request):
 
 def Product_Software_view(request):
     temp = "Company/Add_Software_product.html"
-
     if request.method == "POST":
         software_form = Add_Software_product_form(request.POST or None, request.FILES or None)
+        company = request.session.get("company_register")
+        C_id = company['id']
         if software_form.is_valid():
             software_product_form = software_form.save(commit = False)
+            software_product_form.company_id = C_id
             software_product_form.save()
             return redirect("Company:Home")
         else:

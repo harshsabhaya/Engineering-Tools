@@ -126,6 +126,7 @@ class Product_Hardware(models.Model):
 
 class Product_software(models.Model):
     software_name = models.CharField(max_length = 50)
+    company_id = models.CharField(max_length = 20)
     hardware_product  = models.ForeignKey(Product_Hardware, on_delete=models.CASCADE)
     software_link = models.URLField()
     youtube_link = models.URLField()
