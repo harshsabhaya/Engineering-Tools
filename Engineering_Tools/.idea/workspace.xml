@@ -34,7 +34,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Company/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
@@ -42,6 +42,36 @@
               <folding>
                 <element signature="e#0#64#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Company/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Templates/Company/header_footer.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="74" column="44" lean-forward="true" selection-start-line="74" selection-start-column="44" selection-end-line="74" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Templates/Company/Add_Software_product.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="19" column="96" selection-start-line="19" selection-start-column="96" selection-end-line="19" selection-end-column="96" />
             </state>
           </provider>
         </entry>
@@ -85,7 +115,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Templates/Company/common_for_accounts.html" />
         <option value="$PROJECT_DIR$/Templates/Company/profile.html" />
         <option value="$PROJECT_DIR$/Site_Admin/models.py" />
         <option value="$PROJECT_DIR$/Site_Admin/admin.py" />
@@ -128,14 +157,15 @@
         <option value="$PROJECT_DIR$/Engineering_Tools/settings.py" />
         <option value="$PROJECT_DIR$/User/urls_user.py" />
         <option value="$PROJECT_DIR$/Company/urls_company.py" />
-        <option value="$PROJECT_DIR$/Templates/Company/header_footer.html" />
         <option value="$PROJECT_DIR$/Templates/Company/all_hardware.html" />
         <option value="$PROJECT_DIR$/Templates/Company/all_software.html" />
         <option value="$PROJECT_DIR$/Company/forms.py" />
         <option value="$PROJECT_DIR$/Company/models.py" />
         <option value="$PROJECT_DIR$/Templates/Company/Add_Hardware_product.html" />
-        <option value="$PROJECT_DIR$/Templates/Company/Add_Software_product.html" />
         <option value="$PROJECT_DIR$/Company/views.py" />
+        <option value="$PROJECT_DIR$/Company/admin.py" />
+        <option value="$PROJECT_DIR$/Templates/Company/header_footer.html" />
+        <option value="$PROJECT_DIR$/Templates/Company/Add_Software_product.html" />
       </list>
     </option>
   </component>
@@ -251,7 +281,6 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Site_Admin/models.py" />
     <entry file="file://$PROJECT_DIR$/Templates/Admin/login.html" />
     <entry file="file://$PROJECT_DIR$/Site_Admin/views.py" />
     <entry file="file://$PROJECT_DIR$/Site_Admin/urls_admin.py" />
@@ -575,13 +604,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Templates/Company/header_footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="335" column="65" selection-start-line="335" selection-start-column="65" selection-end-line="335" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Company/urls_company.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
@@ -606,13 +628,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="20" column="32" selection-start-line="20" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Templates/Company/Add_Software_product.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="20" column="75" selection-start-line="20" selection-start-column="75" selection-end-line="20" selection-end-column="75" />
         </state>
       </provider>
     </entry>
@@ -647,6 +662,30 @@
           <folding>
             <element signature="e#0#64#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Company/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Templates/Company/header_footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="74" column="44" lean-forward="true" selection-start-line="74" selection-start-column="44" selection-end-line="74" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Templates/Company/Add_Software_product.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="19" column="96" selection-start-line="19" selection-start-column="96" selection-end-line="19" selection-end-column="96" />
         </state>
       </provider>
     </entry>
