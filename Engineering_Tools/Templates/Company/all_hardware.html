@@ -45,7 +45,7 @@
 
                                 {% for i in data %}
                                     <tr>
-                                        <td> <a href="#"> {{ i.p_model_no }} </a></td>
+                                        <td> <a href="{% url 'Company:Hardware_details' i.p_model_no %}"> {{ i.p_model_no }} </a></td>
                                         <td> {{ i.p_name }} </td>
                                         <td> {{ i.p_manufacturing_date }} </td>
                                         <td> {{ i.p_price }} </td>

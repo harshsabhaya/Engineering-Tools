@@ -275,3 +275,12 @@ def All_Software_product_view(request):
     temp = "Company/all_software.html"
     data = Product_software.objects.all()
     return render(request, temp, {"data":data})
+
+
+def Hardware_Details_view(request, no):
+    temp = "Company/hardware_details.html"
+    Model_No = no
+    Company = request.session.get("company_register")
+    company_id = Company['id']
+    data = Product_Hardware.objects.get(p_company_id = company_id, p_model_no = Model_No)
+    return render(request, temp, {'data':data})
