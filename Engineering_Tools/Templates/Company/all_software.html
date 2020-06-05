@@ -41,7 +41,7 @@
                                 {% for i in data %}
 
                                 <tr>
-                                    <td> <a href="#"> {{ i.software_name }} </a> </td>
+                                    <td> <a href="{% url 'Company:Software_details' i.software_name %}"> {{ i.software_name }} </a> </td>
                                     <td> <a href="{{ i.software_link }}" target="_blank"> {{ i.software_link }} </a> </td>
                                     <td> <a href="{{ i.youtube_link }}" target="_blank"> {{ i.youtube_link }} </a> </td>
                                 </tr>

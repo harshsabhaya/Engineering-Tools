@@ -284,3 +284,11 @@ def Hardware_Details_view(request, no):
     company_id = Company['id']
     data = Product_Hardware.objects.get(p_company_id = company_id, p_model_no = Model_No)
     return render(request, temp, {'data':data})
+
+def Software_Details_view(request, name):
+    temp = "Company/software_details.html"
+    software_name = name
+    Company = request.session.get("company_register")
+    company_id = Company['id']
+    data = Product_software.objects.get(company_id = company_id, software_name = software_name)
+    return render(request, temp, {'data':data})
