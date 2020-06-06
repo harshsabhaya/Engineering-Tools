@@ -6,7 +6,7 @@ import random
 
 
 from .models import Register, Company_Profile, Product_software, Product_Hardware
-from .forms import register_form, login_form, forgot_password_form, otp_match_form, add_new_password_form, add_profile_form, edit_profile_form, Add_Hardware_product_form, Add_Software_product_form, Edit_Hardware_product_form
+from .forms import register_form, login_form, forgot_password_form, otp_match_form, add_new_password_form, add_profile_form, edit_profile_form, Add_Hardware_product_form, Add_Software_product_form, Edit_Hardware_product_form, Edit_Software_product_form
 
 
 # Create your views here.
@@ -303,6 +303,20 @@ def Edit_Hardware_product_view(request, productId):
         Company = request.session.get("company_register")
         company_id = Company['id']
         product.p_company_id = company_id
-        form.save()
+        product.save()
         return redirect("Company:Home")
     return render(request, temp, {'product_hardware_form': form})
+
+
+def Edit_Software_product_view(request, productId):
+    temp = "Company/edit_software_product.html"
+    Software_product = get_object_or_404(Product_software, pk=productId)
+    form = Edit_Software_product_form(request.POST or None, request.FILES or None, instance=Software_product)
+    if form.is_valid():
+        product = form.save(commit = False)
+        Company = request.session.get("company_register")
+        company_id = Company['id']
+        product.company_id = company_id
+        product.save()
+        return redirect("Company:Home")
+    return render(request, temp, {'product_software_form': form})

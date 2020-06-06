@@ -213,3 +213,21 @@ class Edit_Hardware_product_form(forms.ModelForm):
             'p_youtube_link': forms.TextInput(attrs={'class': 'form-control'}),
 
         }
+
+class Edit_Software_product_form(forms.ModelForm):
+    class Meta:
+        model = Product_software
+        fields = "__all__"
+
+        widgets = {
+            'software_name': forms.TextInput(attrs={'class': 'form-control', 'readonly': 'true'}),
+            'hardware_product': forms.Select(attrs={'class':'form-control', 'readonly': 'true'}),
+            'software_link': forms.TextInput(attrs={'class':'form-control'}),
+            'youtube_link': forms.TextInput(attrs={'class':'form-control'}),
+            'p_feature_1': forms.TextInput(attrs={'class':'form-control'}),
+            'p_feature_2': forms.TextInput(attrs={'class':'form-control'}),
+            'p_feature_3': forms.TextInput(attrs={'class':'form-control'}),
+            'p_feature_4': forms.TextInput(attrs={'class':'form-control'}),
+            'p_feature_5': forms.TextInput(attrs={'class':'form-control'}),
+
+        }
