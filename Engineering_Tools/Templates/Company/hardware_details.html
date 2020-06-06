@@ -258,19 +258,19 @@
 
                                 {% if data.p_blog_link != "" %}
                                 <div class="col-md-2" style="border:1px solid white; margin-left: 2%; margin-top:5%; border-radius: 8px;">
-                                    <a target="_blank" href="{{ MEDIA_URL }}{{ data.p_blog_link.url }}">BLOG</a>
+                                    <a target="_blank" href="{{ data.p_blog_link }}">BLOG</a>
                                 </div>
                                 {% endif %}
 
                                 {% if data.p_youtube_link != "" %}
                                 <div class="col-md-2" style="border:1px solid white; margin-left: 2%; margin-top:5%; border-radius: 8px;">
-                                    <a target="_blank" href="{{ MEDIA_URL }}{{ data.p_youtube_link.url }}">YOUTUBE</a>
+                                    <a target="_blank" href="{{ data.p_youtube_link }}">YOUTUBE</a>
                                 </div>
                                 {% endif %}
 
                                 {% if data.p_software_link != "" %}
                                 <div class="col-md-2" style="border:1px solid white; margin-left: 2%; margin-top:5%; border-radius: 8px;">
-                                    <a target="_blank" href="{{ MEDIA_URL }}{{ data.p_software_link.url }}">SOFTWARE</a>
+                                    <a target="_blank" href="{{ data.p_software_link }}">SOFTWARE</a>
                                 </div>
                                 {% endif %}
                             </div>

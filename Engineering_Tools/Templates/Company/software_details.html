@@ -40,7 +40,7 @@
                                 <div class="col-md-6">
                                     <div class="row">
 
-                                    <div class="col-md-3">
+                                    <div class="col-md-4">
                                         <span style="color:white"> Software Name:</span>
                                     </div>
                                     <div class="col-md-8">
@@ -53,7 +53,7 @@
                                 <div class="col-md-6">
                                     <div class="row">
 
-                                    <div class="col-md-3">
+                                    <div class="col-md-4">
                                         <span style="color:white"> Hardware Product:</span>
                                     </div>
                                     <div class="col-md-8">
@@ -117,15 +117,15 @@
                             <div class="row" style="text-align:center; color:white; font-size:20px; margin-top:-5%">
 
 
-                                {% if data.p_youtube_link != "" %}
+                                {% if data.youtube_link != "" %}
                                 <div class="col-md-2" style="border:1px solid white; margin-left: 2%; margin-top:5%; border-radius: 8px;">
-                                    <a target="_blank" href="{{ data.p_youtube_link.url }}">YOUTUBE</a>
+                                    <a target="_blank" href="{{ data.youtube_link }}">YOUTUBE</a>
                                 </div>
                                 {% endif %}
 
-                                {% if data.p_software_link != "" %}
+                                {% if data.software_link != "" %}
                                 <div class="col-md-2" style="border:1px solid white; margin-left: 2%; margin-top:5%; border-radius: 8px;">
-                                    <a target="_blank" href="{{ MEDIA_URL }}{{ data.p_software_link.url }}">SOFTWARE</a>
+                                    <a target="_blank" href="{{ data.software_link }}">SOFTWARE</a>
                                 </div>
                                 {% endif %}
                             </div>
