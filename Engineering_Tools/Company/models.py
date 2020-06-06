@@ -135,7 +135,8 @@ class Product_software(models.Model):
     p_feature_3 = models.CharField(max_length=300, null=True, blank=True)
     p_feature_4 = models.CharField(max_length=300, null=True, blank=True)
     p_feature_5 = models.CharField(max_length=300, null=True, blank=True)
-
+    creation_date = models.DateTimeField(auto_now_add=True)
+    updated_date = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return  self.software_name
