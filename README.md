@@ -7,3 +7,5 @@
 - Feedback Data Pending :: Admin Side
 - Hardware Data Pending :: Admin Side
 - Software Data Pending :: Admin Side
+- Readonly Select Field in Edit :: Company Side
+- Need To Add Toast Messages
