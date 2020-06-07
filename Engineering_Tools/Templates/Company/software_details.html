@@ -8,24 +8,41 @@
         <!-- Content Body Start -->
         <div class="content-body">
 
+
+
             <!-- Page Headings Start -->
             <div class="row justify-content-between align-items-center mb-10">
 
                 <!-- Page Heading Start -->
-                <div class="col-12 col-lg-auto mb-20">
+                <div class="col-md-8 col-sm-8 col-lg-auto mb-20">
                     <div class="page-heading">
-                        <h3 class="title"> Details <span>/ Software</span></h3>
+                        <h3 class="title"> Details <span>/ Hardware</span></h3>
                     </div>
                 </div><!-- Page Heading End -->
 
-                <!-- Page Heading Start -->
-                <div class="col-12 col-lg-auto mb-20">
-                    <div class="page-heading">
-                        <a class="btn btn-primary" href="{% url 'Company:Edit_Software' data.id %}" >Edit Product</a>
-                    </div>
-                </div><!-- Page Heading End -->
+                  <!-- Page Heading Start -->
+                <div class="col-md-4 col-sm-4 col-lg-auto mb-20">
+                    <div class="row">
 
+                    <div class="col-md-6 col-sm-6 page-heading">
+                        <a style="width:100%; height:100%;" class="btn btn-primary" href="{% url 'Company:Edit_Software' data.id %}">Edit Product</a>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6 page-heading">
+                        <form style="width:100%; height:100%;" action="{% url 'Company:Delete_Software' %}" method="POST">
+                            {% csrf_token %}
+                            <input type="hidden" name="ID" value="{{ data.id }}">
+                            <button style="width:100%; height:100%;" class="btn btn-danger">Delete</button>
+                        </form>
+
+                    </div>
+                    </div>
+                </div><!-- Page Heading End] -->
             </div><!-- Page Headings End -->
+
+
+
+
 
             <div class="row">
 

@@ -327,3 +327,9 @@ def Delete_Hardware_product_view(request):
     productId = request.POST.get('ID')
     Product_Hardware.objects.get(id = productId).delete()
     return redirect("Company:All_Hardware_product")
+
+
+def Delete_Software_product_view(request):
+    productId = request.POST.get('ID')
+    Product_software.objects.get(id = productId).delete()
+    return redirect("Company:All_Software_product")
