@@ -318,5 +318,12 @@ def Edit_Software_product_view(request, productId):
         company_id = Company['id']
         product.company_id = company_id
         product.save()
+        messages.success(request, "Software Updated")
         return redirect("Company:Home")
     return render(request, temp, {'product_software_form': form})
+
+
+def Delete_Hardware_product_view(request):
+    productId = request.POST.get('ID')
+    Product_Hardware.objects.get(id = productId).delete()
+    return redirect("Company:All_Hardware_product")
