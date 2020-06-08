@@ -3321,34 +3321,6 @@ button.icon-cart span.count-style {
     font-size: 30px;
     margin: 0;
 }
-.newsletter-style form input {
-    background: transparent none repeat scroll 0 0;
-    border: 2px solid #2e7ed5;
-    box-shadow: none;
-    color: #75b4fb;
-    font-size: 12px;
-    height: 45px;
-    padding: 0 75px 0 10px;
-    width: 530px;
-    border-radius: 5px;
-}
-.newsletter-style form input::-moz-placeholder {
-    color: #fff;
-    opacity: 1;
-}
-.newsletter-style form input::-webkit-input-placeholder {
-    color: #fff;
-    opacity: 1;
-}
-.newsletter-style form {
-    position: relative;
-}
-.newsletter-style form .mc-form {
-    position: relative;
-}
-.mc-form .mc-news {
-    display: none;
-}
 .subscribe-form .mc-form .clear {
     background: rgb(255, 255, 255) url("../img/icon-img/send.png") no-repeat scroll right 25px center;
     border-radius: 3px;
@@ -9597,29 +9569,6 @@ h4.section-title-about::before {
     background-color: #242424;
 }
 
-/* newsletter index-auto-parts */
-.newsletter-img-2 {
-    background-image: url("../img/bg/bg-17.jpg");
-    background-repeat: no-repeat;
-}
-.newsletter-icon-img {
-    margin-right: 30px;
-}
-.newsletter-red-style .subscribe-form .mc-form .clear {
-    background: rgb(255, 255, 255) url("../img/icon-img/send-3.png") no-repeat scroll right 25px center;
-}
-.newsletter-red-style .subscribe-form .mc-form .clear:hover {
-    background: rgb(221, 221, 221) url("../img/icon-img/send-3.png") no-repeat scroll right 25px center;
-}
-.newsletter-style.newsletter-red-style form input {
-    border: 2px solid #ec4949;
-    color: #fff;
-}
-.newsletter-red-style .subscribe-form .clear input,
-.newsletter-limegreen-style .subscribe-form .clear input {
-    border: medium none;
-}
-
 /* blog index-auto-parts */
 .blog-content-5 > h4 {
     font-size: 24px;
@@ -9768,22 +9717,6 @@ h4.section-title-about::before {
 }
 .nav-style-limegreen .add-to-cart > a {
     background-color: #62ab00;
-}
-
-/* newsletter index-organic */
-.newsletter-img-3 {
-    background-image: url("../img/bg/bg-18.jpg");
-    background-repeat: no-repeat;
-}
-.newsletter-style.newsletter-limegreen-style form input {
-    border: 2px solid #92d33c;
-    color: #fff;
-}
-.newsletter-limegreen-style .subscribe-form .mc-form .clear {
-    background: rgb(255, 255, 255) url("../img/icon-img/send-4.png") no-repeat scroll right 25px center;
-}
-.newsletter-limegreen-style .subscribe-form .mc-form .clear:hover {
-    background: rgb(221, 221, 221) url("../img/icon-img/send-4.png") no-repeat scroll right 25px center;
 }
 
 /* blog index-organic */
@@ -10285,38 +10218,6 @@ h4.section-title-about::before {
     background-color: #624455;
 }
 
-/* newsletter index-Cosmetic */
-.newsletter-black-color .newsletter-content > p,
-.newsletter-black-color .newsletter-content > h4 {
-    color: #242424;
-}
-.newsletter-black-color .newsletter-style form input {
-    border: 2px solid #ebebeb;
-    color: #242424;
-}
-.newsletter-black-color .subscribe-form .clear input {
-    border: medium none;
-}
-.newsletter-black-color .subscribe-form .mc-form .clear {
-    background: rgb(98, 68, 85) url("../img/icon-img/send-5.png") no-repeat scroll right 25px center;
-}
-.newsletter-black-color .subscribe-form .mc-form .clear:hover {
-    background: rgb(0, 0, 0) url("../img/icon-img/send-5.png") no-repeat scroll right 25px center;
-}
-.newsletter-black-color .newsletter-style form input::-moz-placeholder {
-    color: #242424;
-    opacity: 1;
-}
-.newsletter-black-color .newsletter-style form input::-webkit-input-placeholder {
-    color: #242424;
-    opacity: 1;
-}
-.newsletter-border-2 {
-    border: 1px solid #ebebeb;
-    border-radius: 5px;
-    padding: 22px 40px;
-}
-
 /* footer index-Cosmetic */
 .copyright-bouquet.copyright > p a,
 .footer-widget-bouquet .footer-content ul li:hover a,
@@ -10683,26 +10584,6 @@ h4.section-title-about::before {
 .devita-product-persiangreen .product-content > h4 a:hover,
 .devita-product-persiangreen .product-rating i.theme-star {
     color: #fcb800;
-}
-
-/* newsletter Index Housewares */
-.newsletter-img-4 {
-    background-image: url("../img/bg/bg-20.jpg");
-    background-repeat: no-repeat;
-}
-.newsletter-style.newsletter-persiangreen-style form input {
-    border: 2px solid #434f57;
-    color: #fff;
-}
-.newsletter-persiangreen-style .subscribe-form .clear input {
-    border: none;
-}
-.newsletter-persiangreen-style .subscribe-form .mc-form .clear {
-    background: rgb(252, 184, 0) url("../img/icon-img/send-5.png") no-repeat scroll right 25px center;
-    transition: all .3s ease 0s;
-}
-.newsletter-persiangreen-style .subscribe-form .mc-form .clear:hover {
-    background: rgb(255, 255, 255) url("../img/icon-img/send-2.png") no-repeat scroll right 25px center;
 }
 
 /* blog Index Housewares */

@@ -185,15 +185,7 @@
     .connect-content > p {
         width: 58%;
     }
-    .newsletter-content > h4 {
-        font-size: 24px;
-    }
-    .newsletter-style form input {
-        width: 400px;
-    }
-    .newsletter-from-close.ml-50 {
-        margin-left: 0;
-    }
+
     .product-tab-list::before,
     .product-tab-list::after {
         width: 190px;
@@ -827,18 +819,7 @@
     .related-product-area {
         margin-bottom: 50px;
     }
-    .newsletter-elc-2 .newsletter-style form input {
-        width: 300px;
-    }
-    .newsletter-elc-2 .subscribe-form .clear input {
-        width: 60px;
-    }
-    .newsletter-content > h4 {
-        font-size: 21px;
-    }
-    .newsletter-from-close.newsletter-elc-2 {
-        margin: 10px 0 0;
-    }
+
     button.icon-cart span.count-style {
         left: -5px;
     }
@@ -1687,21 +1668,6 @@
     }
     .best-selling-pro-wrapper .product-img > span {
         transform: inherit;
-    }
-    .newsletter-img > img {
-        margin: 0 20px 0 0;
-    }
-    .newsletter-style form input {
-        width: 230px;
-    }
-    .newsletter-from-close.ml-50 {
-        margin: 15px 0 0;
-    }
-    .newsletter-content > h4 {
-        font-size: 19px;
-    }
-    .newsletter-content > p {
-        font-size: 16px;
     }
     .shop-service-content {
         margin: 15px 0;
@@ -3364,15 +3330,6 @@
     }
     .product-tab-list > a h4 {
         padding: 11px 15px 10px;
-    }
-    .newsletter-style form input {
-        width: 375px;
-    }
-    .newsletter-elc-2 .newsletter-style form input {
-        width: 400px;
-    }
-    .newsletter-elc-2 .subscribe-form .clear input {
-        width: 60px;
     }
     .header-bottom.header-bottom-red {
         padding: 0px;

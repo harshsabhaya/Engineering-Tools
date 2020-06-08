@@ -7,11 +7,7 @@
         $('.notification-section').slideUp();
     });
     
-    /* Newsletter */
-    $('.newsletter-close button').on('click', function() {
-        $('.newsletter-section').slideUp();
-    });
-    
+
     /* jQuery MeanMenu */
     $('#mobile-menu-active').meanmenu({
         meanScreenWidth: "991",
