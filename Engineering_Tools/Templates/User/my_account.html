@@ -47,7 +47,14 @@
                                                            {% csrf_token %}
                                                         <div class="billing-info">
                                                             <label>Phone no</label>
-                                                            <input type="text" name="PhoneNumber">
+                                                            <div class="row">
+                                                                <div class="col-md-10">
+                                                                    <input id="phone" type="text" name="PhoneNumber" value="{{ data.phone }}" readonly>
+                                                                </div>
+                                                                 <div class="col-md-2">
+                                                                     <p style="border-radius:5px; width:65%; height:65%; font-size:18px;" onclick="EditPhone()" class="btn btn-primary">Edit</p>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                            <div class="row">
                                                                <div class="col-md-2">
@@ -64,7 +71,6 @@
 
                                                                </div>
                                                             </div>
-
                                                     </form>
                                                     </div>
                                                 </div>
@@ -79,5 +85,10 @@
             </div>
         </div>
 
+<script>
+    function EditPhone(){
+        document.getElementById('phone').removeAttribute("readonly");
+    }
+</script>
 
 {% endblock %}

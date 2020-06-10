@@ -8,7 +8,9 @@ def Home_View_User(request):
 
 def My_Account_View(request):
     temp = "User/my_account.html"
-    return render(request, temp)
+    ID = request.user.id
+    data = Profile.objects.get(user_id = ID)
+    return render(request, temp, {'data':data})
 
 
 def Update_Account_Info_View(request):
