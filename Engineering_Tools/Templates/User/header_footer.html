@@ -33,12 +33,15 @@
                         <div class="col-lg-6 col-md-6 col-12">
                             <div class="header-top-right">
                                 <ul>
+
+							{% if request.user.id == None %}
                                     <li>
-                                        <a href="login-register.html"> Login </a>
+                                        <a href="{% url 'account_login' %}"> Login </a>
                                     </li>
                                     <li>
-                                        <a href="login-register.html"> Register </a>
+                                        <a href="{% url 'account_signup' %}"> Register </a>
                                     </li>
+							{% else %}
                                     <li>
                                         <a href="{% url 'User:My_Account' %}">My Account</a>
                                     </li>
@@ -49,8 +52,9 @@
                                         <a href="checkout.html"> Checkout</a>
                                     </li>
                                     <li>
-                                        <a href="login-register.html"> Logout </a>
+                                        <a href="{% url 'account_logout' %}"> Logout </a>
                                     </li>
+                             {% endif %}
                                 </ul>
                             </div>
                         </div>
