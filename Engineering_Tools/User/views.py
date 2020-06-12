@@ -10,14 +10,21 @@ def My_Account_View(request):
     temp = "User/my_account.html"
     ID = request.user.id
     data = Profile.objects.get(user_id = ID)
+    print(data.gender)
     return render(request, temp, {'data':data})
 
 
 def Update_Account_Info_View(request):
     if request.method == 'POST':
         number = request.POST.get("PhoneNumber")
+        Gender = request.POST.get("genderSelect")
+        Address = request.POST.get("address")
+        City = request.POST.get("city")
+        State = request.POST.get("state")
+        Country = request.POST.get("country")
+        Pincode = request.POST.get("pincode")
         ID = request.user.id
-        Profile.objects.filter(user_id=ID).update(phone=number)
+        Profile.objects.filter(user_id=ID).update(phone=number, gender=Gender, address_line=Address, city=City, state=State, country=Country, pincode=Pincode)
         return redirect('User:Home')
     else:
         return redirect('User:My_Account')
