@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Profile
+from Company.models import Company_Profile
 # Create your views here.
 
 def Home_View_User(request):
@@ -28,3 +29,9 @@ def Update_Account_Info_View(request):
         return redirect('User:Home')
     else:
         return redirect('User:My_Account')
+
+
+def All_Company_View(request):
+    temp = "User/all_company.html"
+    data = Company_Profile.objects.all()
+    return render(request, temp, {'data':data})
