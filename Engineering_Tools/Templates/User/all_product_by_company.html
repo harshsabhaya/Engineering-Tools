@@ -9,6 +9,7 @@
                 <div class="breadcrumb-content">
                     <ul>
                         <li><a href="index.html">Home</a></li>
+                        <li><a href="{% url 'User:All_Company' %}">Company</a></li>
                         <li class="active">Products By {{ CompanyName }}</li>
                     </ul>
                 </div>
@@ -21,6 +22,14 @@
                         <div class="tab-content jump">
                             <div class="tab-pane active pb-20" id="product-grid">
                                 <div class="row">
+                                    {% if not data %}
+                                        <div class="col-md-12">
+                                            <center>
+                                            <p style="font-size:20px;color:black;">{{ CompanyName }} Has No Products To Sold ...</p>
+                                            <p style="font-size:16px;color:black;">Please, <a href="{% url 'User:All_Company' %}" style="color:blue">Check Other Company</a>...</p>
+                                            </center>
+                                         </div>
+                                    {% else %}
                                     {% for i in data %}
                                     <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 mb-30">
                                         <div class="devita-product-2 mrg-inherit">
@@ -70,6 +79,7 @@
                                         </div>
                                     </div>
                                     {% endfor %}
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>
