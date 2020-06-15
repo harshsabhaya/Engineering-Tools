@@ -35,3 +35,7 @@ def All_Company_View(request):
     temp = "User/all_company.html"
     data = Company_Profile.objects.all()
     return render(request, temp, {'data':data})
+
+def All_Product_By_Company(request):
+    temp = "User/all_product_by_company.html"
+    return render(request, temp)

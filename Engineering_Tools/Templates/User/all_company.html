@@ -31,7 +31,9 @@
                                                         </div>
                                                         <div style="padding:6%;" class="col-md-4 col-sm-4">
                                                             <center>
-                                                                <form action="#" method="POST">
+                                                                <form action="{% url 'User:All_Product_By_Company' %}" method="POST">
+                                                                    {% csrf_token %}
+                                                                    <input type="hidden" value="{{ i.id }}" name="Company_ID">
                                                                     <button class="btn btn-primary" style="border-radius:5px;">
                                                                         All Product
                                                                     </button>
