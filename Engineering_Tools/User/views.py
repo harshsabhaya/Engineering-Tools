@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Profile
-from Company.models import Company_Profile, Product_Hardware, Register
+from Company.models import Company_Profile, Product_Hardware, Register, Product_Catagory
+from django.views.decorators.clickjacking import xframe_options_exempt
 # Create your views here.
 
 def Home_View_User(request):
@@ -43,7 +44,9 @@ def All_Product_By_Company(request):
     data = Product_Hardware.objects.filter(p_company_id = company.id)
     return render(request, temp, {'data':data, 'CompanyName':company.c_name})
 
-
+@xframe_options_exempt
 def Product_Details_View(request, ID):
     temp = "User/product_details.html"
-    return render(request, temp)
+    data = Product_Hardware.objects.get(id = ID)
+    category = Product_Catagory.objects.get(id = data.p_catagory_id)
+    return render(request, temp, {'data':data, 'categoryName':category.catagory_name})
