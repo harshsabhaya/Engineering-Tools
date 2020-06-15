@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Profile
-from Company.models import Company_Profile
+from Company.models import Company_Profile, Product_Hardware, Register
 # Create your views here.
 
 def Home_View_User(request):
@@ -38,4 +38,7 @@ def All_Company_View(request):
 
 def All_Product_By_Company(request):
     temp = "User/all_product_by_company.html"
-    return render(request, temp)
+    companyEmail = request.POST.get("Company_Email")
+    company = Register.objects.get(c_email = companyEmail)
+    data = Product_Hardware.objects.filter(p_company_id = company.id)
+    return render(request, temp, {'data':data, 'CompanyName':company.c_name})

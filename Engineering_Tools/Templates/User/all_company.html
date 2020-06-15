@@ -33,7 +33,7 @@
                                                             <center>
                                                                 <form action="{% url 'User:All_Product_By_Company' %}" method="POST">
                                                                     {% csrf_token %}
-                                                                    <input type="hidden" value="{{ i.id }}" name="Company_ID">
+                                                                    <input type="hidden" value="{{ i.c_email }}" name="Company_Email">
                                                                     <button class="btn btn-primary" style="border-radius:5px;">
                                                                         All Product
                                                                     </button>

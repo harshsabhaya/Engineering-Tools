@@ -52,7 +52,7 @@ def upload_product_img_path(instance, filename):
 
 class Register(models.Model):
     c_name = models.CharField(max_length = 50, unique = True)
-    c_email = models.EmailField()
+    c_email = models.EmailField(unique = True)
     c_password = models.CharField(max_length = 16)
     c_r_password = models.CharField(max_length = 16)
     c_verification_flag = models.BooleanField()
