@@ -42,3 +42,8 @@ def All_Product_By_Company(request):
     company = Register.objects.get(c_email = companyEmail)
     data = Product_Hardware.objects.filter(p_company_id = company.id)
     return render(request, temp, {'data':data, 'CompanyName':company.c_name})
+
+
+def Product_Details_View(request, ID):
+    temp = "User/product_details.html"
+    return render(request, temp)

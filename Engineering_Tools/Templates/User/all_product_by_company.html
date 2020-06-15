@@ -35,19 +35,19 @@
                                         <div class="devita-product-2 mrg-inherit">
                                             <div class="product-img">
                                                 <div style="height:200px; width:100%" class="product-img-slider">
-                                                    <a  href="product-details.html"><img style="height:85%; width:100%" src="{{ MEDIA_ROOT }}{{ i.p_img_1.url }}" alt=""></a>
-                                                    <a  href="product-details.html"><img style="height:85%; width:100%" src="{{ MEDIA_ROOT }}{{ i.p_img_2.url }}" alt=""></a>
+                                                    <a  href="{% url 'User:Product_Details' i.id %}"><img style="height:85%; width:100%" src="{{ MEDIA_ROOT }}{{ i.p_img_1.url }}" alt=""></a>
+                                                    <a  href="{% url 'User:Product_Details' i.id %}"><img style="height:85%; width:100%" src="{{ MEDIA_ROOT }}{{ i.p_img_2.url }}" alt=""></a>
                                                     {% if i.p_img_3 != "" %}
-                                                    <a  href="product-details.html"><img style="height:85%; width:100%" src="{{ MEDIA_ROOT }}{{ i.p_img_3.url }}" alt=""></a>
+                                                    <a  href="{% url 'User:Product_Details' i.id %}"><img style="height:85%; width:100%" src="{{ MEDIA_ROOT }}{{ i.p_img_3.url }}" alt=""></a>
                                                     {% endif %}
                                                     {% if i.p_img_4 != "" %}
-                                                    <a  href="product-details.html"><img style="height:85%; width:100%" src="{{ MEDIA_ROOT }}{{ i.p_img_4.url }}" alt=""></a>
+                                                    <a  href="{% url 'User:Product_Details' i.id %}"><img style="height:85%; width:100%" src="{{ MEDIA_ROOT }}{{ i.p_img_4.url }}" alt=""></a>
                                                     {% endif %}
                                                     {% if i.p_img_5 != "" %}
-                                                    <a  href="product-details.html"><img style="height:85%; width:100%" src="{{ MEDIA_ROOT }}{{ i.p_img_5.url }}" alt=""></a>
+                                                    <a  href="{% url 'User:Product_Details' i.id %}"><img style="height:85%; width:100%" src="{{ MEDIA_ROOT }}{{ i.p_img_5.url }}" alt=""></a>
                                                     {% endif %}
                                                     {% if i.p_img_6 != "" %}
-                                                    <a  href="product-details.html"><img style="height:85%; width:100%" src="{{ MEDIA_ROOT }}{{ i.p_img_6.url }}" alt=""></a>
+                                                    <a  href="{% url 'User:Product_Details' i.id %}"><img style="height:85%; width:100%" src="{{ MEDIA_ROOT }}{{ i.p_img_6.url }}" alt=""></a>
                                                     {% endif %}
                                                 </div>
                                             </div>
