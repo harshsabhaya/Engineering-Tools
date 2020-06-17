@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, reverse
 from .models import Profile
-from Company.models import Company_Profile, Product_Hardware, Register, Product_Catagory
+from Company.models import Company_Profile, Product_Hardware, Register, Product_Catagory, Product_Review
 from Company.forms import Product_Review_form
 # Create your views here.
 
@@ -49,7 +49,8 @@ def Product_Details_View(request, ID):
     data = Product_Hardware.objects.get(id = ID)
     category = Product_Catagory.objects.get(id = data.p_catagory_id)
     review_form = Product_Review_form()
-    return render(request, temp, {'data':data, 'categoryName':category.catagory_name, 'review_form':review_form})
+    review_data = Product_Review.objects.filter(product_id = ID)
+    return render(request, temp, {'data':data, 'categoryName':category.catagory_name, 'review_form':review_form, 'review_data':review_data})
 
 def Add_Product_Review_View(request):
     temp = "User/product_details.html"
