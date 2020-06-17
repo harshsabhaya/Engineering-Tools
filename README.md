@@ -10,4 +10,3 @@
 - Readonly Select Field in Edit :: Company Side
 - Need To Add Toast Messages
 - Unique Email in Login :: Company Side
-- Product Review Logic Pending :: User Side
