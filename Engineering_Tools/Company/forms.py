@@ -1,5 +1,5 @@
 from  django import forms
-from .models import Register, Company_Profile, Product_Hardware, Product_software
+from .models import Register, Company_Profile, Product_Hardware, Product_software, Product_Review
 
 
 class DateInput(forms.DateInput):
@@ -231,3 +231,9 @@ class Edit_Software_product_form(forms.ModelForm):
             'p_feature_5': forms.TextInput(attrs={'class':'form-control'}),
 
         }
+
+
+class Product_Review_form(forms.ModelForm):
+    class Meta:
+        model = Product_Review
+        fields = ['message']

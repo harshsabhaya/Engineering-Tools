@@ -1,6 +1,7 @@
 {% extends 'User/header_footer.html' %}
 {% load static %}
 {% load i18n %}
+{% load crispy_forms_tags %}
 
 {% block 'content' %}
 
@@ -205,33 +206,39 @@
                             <div class="ratting-form-wrapper">
                                 <h3>Add your Comments :</h3>
                                 <div class="ratting-form">
-                                    <form action="#">
-                                        <div class="star-box">
-                                            <h2>Rating:</h2>
-                                            <div class="ratting-star">
-                                                <i class="ion-star theme-color"></i>
-                                                <i class="ion-star theme-color"></i>
-                                                <i class="ion-star theme-color"></i>
-                                                <i class="ion-star theme-color"></i>
-                                                <i class="ion-star"></i>
-                                            </div>
-                                        </div>
+                                    <form action="{% url 'User:Product_Review' %}" method="post">
+                                        {% csrf_token %}
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="rating-form-style mb-20">
-                                                    <input placeholder="Name" type="text">
+                                                    <input type="hidden" value={{data.id}} name="product_id">
+                                                    <input type="hidden" value="{{ data.p_name }}" name="product_name">
+                                                    <label>Username</label>
+                                                    <input type="text" value="{{ request.user.username }}"readonly>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="rating-form-style mb-20">
-                                                    <input placeholder="Email" type="text">
+                                                    <label>Email</label>
+                                                    <input type="email" value="{{ request.user.email }}" readonly>
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
-                                                <div class="rating-form-style form-submit">
-                                                    <textarea name="message" placeholder="Message"></textarea>
-                                                    <input type="submit" value="add review">
+                                                <div class="rating-form-style mb-20">
+                                                    {{ review_form.message | as_crispy_field }}
                                                 </div>
+                                            </div>
+                                            <div class="col-md-3">
+
+                                            </div>
+                                            <div class="col-md-3">
+                                                <input type="submit" value="SUBMIT" class="btn btn-primary" style="width:100%; border-radius:5px">
+                                            </div>
+                                            <div class="col-md-3">
+                                                <input type="reset" value="RESET" class="btn btn-danger" style="width:100%; border-radius:5px">
+                                            </div>
+                                            <div class="col-md-3">
+
                                             </div>
                                         </div>
                                     </form>

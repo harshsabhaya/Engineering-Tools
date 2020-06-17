@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 import os
 import random
 # Create your models here.
@@ -140,3 +141,16 @@ class Product_software(models.Model):
 
     def __str__(self):
         return  self.software_name
+
+
+class Product_Review(models.Model):
+    user = models.ForeignKey(User, on_delete = models.CASCADE)
+    product = models.ForeignKey(Product_Hardware, on_delete = models.CASCADE)
+    user_name = models.CharField(max_length = 20)
+    user_email = models.EmailField()
+    product_name = models.CharField(max_length = 20)
+    message = models.TextField()
+    submited_on = models.DateTimeField(auto_now_add = True)
+
+    def __str__(self):
+        return self.user_name + " " + self.product_name
