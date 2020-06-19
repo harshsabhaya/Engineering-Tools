@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse
 from .models import Profile
 from Company.models import Company_Profile, Product_Hardware, Register, Product_Catagory, Product_Review
 from Company.forms import Product_Review_form
+from Cart.models import Wishlist
 # Create your views here.
 
 def Home_View_User(request):
@@ -50,7 +51,8 @@ def Product_Details_View(request, ID):
     category = Product_Catagory.objects.get(id = data.p_catagory_id)
     review_form = Product_Review_form()
     review_data = Product_Review.objects.filter(product_id = ID)
-    return render(request, temp, {'data':data, 'categoryName':category.catagory_name, 'review_form':review_form, 'review_data':review_data})
+    InWishlist = Wishlist.objects.filter(product_name__iexact=data.p_name, user_email__iexact=request.user.email).exists()
+    return render(request, temp, {'data':data, 'categoryName':category.catagory_name, 'review_form':review_form, 'review_data':review_data, 'inWishList':InWishlist})
 
 def Add_Product_Review_View(request):
     product_id = request.POST.get('product_id')
