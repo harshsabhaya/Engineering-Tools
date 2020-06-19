@@ -99,3 +99,11 @@ def Add_To_Cart_From_All_Product_View(request):
         return redirect('User:Cart')
     else:
         return redirect("User:Home")
+
+def Remove_From_Cart_From_All_Product_View(request):
+    if request.method == "POST":
+        P_ID = request.POST.get("productId")
+        Cart.objects.get(product= P_ID, user=request.user).delete()
+        return redirect('User:Cart')
+    else:
+        return redirect("User:Home")

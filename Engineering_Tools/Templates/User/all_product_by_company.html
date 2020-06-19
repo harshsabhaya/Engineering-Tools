@@ -85,9 +85,9 @@
                                                         {% endif %}
                                                             &nbsp;&nbsp;
                                                         {% if i.inCart %}
-                                                            <form method="POST" style="height:100%;"  action="{% url 'Cart:Remove_From_Cart' %}">
+                                                            <form method="POST" style="height:100%;"  action="{% url 'Cart:Remove_From_Cart_From_All_Product_View' %}">
                                                                 {% csrf_token %}
-                                                                <input type="hidden" name="productId" value="{{ data.id }}">
+                                                                <input type="hidden" name="productId" value="{{ i.id }}">
                                                                 <button class="btn btn-danger"  style="border-radius:5px;">
                                                                     Remove From Cart
                                                                 </button>
