@@ -74,3 +74,14 @@ def Add_To_Cart_From_Details_View(request):
         return redirect(reverse('User:Product_Details', args=(P_ID,)))
     else:
         return redirect("User:Home")
+
+
+
+def Remove_From_Cart_From_Details_View(request):
+    if request.method == "POST":
+        P_ID = request.POST.get("productId")
+        Cart.objects.get(product= P_ID, user=request.user).delete()
+        return redirect(reverse('User:Product_Details', args=(P_ID,)))
+    else:
+        return redirect("User:Home")
+
