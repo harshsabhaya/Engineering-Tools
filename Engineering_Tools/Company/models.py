@@ -153,4 +153,4 @@ class Product_Review(models.Model):
     submited_on = models.DateTimeField(auto_now_add = True)
 
     def __str__(self):
-        return self.user_name + " " + self.product_name
+        return self.user_name + " / " + self.product_name

@@ -92,3 +92,7 @@ def User_Wishlist_View(request):
     temp = "User/wishlist.html"
     data = Wishlist.objects.filter(user= request.user).order_by('-added_in_wishlist')
     return render(request, temp, {'data':data})
+
+def User_Cart_View(request):
+    temp = "User/cart.html"
+    return render(request, temp)

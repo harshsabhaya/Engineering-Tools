@@ -13,5 +13,4 @@ class Wishlist(models.Model):
     added_in_wishlist = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.product_name + " " + self.user_name
-
+        return self.product_name + " / " + self.user_name
