@@ -43,6 +43,11 @@ def All_Product_By_Company(request):
     companyEmail = request.POST.get("Company_Email")
     company = Register.objects.get(c_email = companyEmail)
     data = Product_Hardware.objects.filter(p_company_id = company.id)
+
+    for i in range(0,len(data)):
+        InWishlist = Wishlist.objects.filter(product_name__iexact=data[i],user_email__iexact=request.user.email).exists()
+        data[i].inWishlist = InWishlist
+
     return render(request, temp, {'data':data, 'CompanyName':company.c_name})
 
 def Product_Details_View(request, ID):
