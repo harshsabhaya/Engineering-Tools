@@ -80,9 +80,17 @@
                                 </div>
                                 <div class="product-action">
                                     <a class="action-cart" title="Add To Cart" href="#"> Add to Cart </a>
-                                    <a class="same-action" title="Wishlist" href="#">
-                                        <i class="fa fa-heart"></i>
-                                    </a>
+
+                                    <form method="POST" action="{% url 'Cart:Add_To_WishList' %}">
+                                        {% csrf_token %}
+                                        <input type="hidden" name="productId" value="{{ data.id }}">
+                                        <input type="hidden" name="productName" value="{{ data.p_name }}">
+                                        <input type="hidden" name="productPrice" value="{{ data.p_price }}">
+                                        <button class="btn" style="width:100%; height:100%; background-color:#EEF0F1; border-radius:5px;">
+                                                <i class="fa fa-heart"></i>
+                                        </button>
+                                    </form>
+
                                 </div>
                             </div>
                             <div class="pro-dec-categories">
