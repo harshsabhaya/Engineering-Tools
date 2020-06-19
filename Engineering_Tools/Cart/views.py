@@ -50,3 +50,12 @@ def Remove_From_Wish_List_From_All_Product_View(request):
         return redirect('User:Wishlist')
     else:
         return redirect("User:Home")
+
+
+def Remove_From_WishList_View(request):
+    if request.method == "POST":
+        ID = request.POST.get("ID")
+        Wishlist.objects.get(id=ID, user=request.user).delete()
+        return redirect('User:Wishlist')
+    else:
+        return redirect("User:Home")

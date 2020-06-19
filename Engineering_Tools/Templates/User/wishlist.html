@@ -45,9 +45,13 @@
                                                     </button>
                                                 </td>
                                                 <td>
-                                                    <button class="btn btn-danger" style="border-radius:5px">
-                                                        Remove
-                                                    </button>
+                                                    <form method="POST" action="{% url 'Cart:Remove_From_Wish_LIST' %}">
+                                                        {% csrf_token %}
+                                                        <input type="hidden" value="{{ i.id }}" name="ID" >
+                                                        <button class="btn btn-danger" style="border-radius:5px">
+                                                            Remove
+                                                        </button>
+                                                    </form>
                                                 </td>
                                             </tr>
                                         {% endfor %}
