@@ -85,3 +85,17 @@ def Remove_From_Cart_From_Details_View(request):
     else:
         return redirect("User:Home")
 
+
+def Add_To_Cart_From_All_Product_View(request):
+    if request.method == "POST":
+        product_name = request.POST.get("productName")
+        user_name = request.user.username
+        user_email = request.user.email
+        price = request.POST.get("productPrice")
+        P_ID = request.POST.get("productId")
+        product = Product_Hardware.objects.get(id=P_ID)
+        user = request.user
+        Cart.objects.create(product_name=product_name, user_name=user_name, user_email=user_email, price=price,product_id=product.id, user_id=user.id, quantity=1, sub_total=price)
+        return redirect('User:Cart')
+    else:
+        return redirect("User:Home")

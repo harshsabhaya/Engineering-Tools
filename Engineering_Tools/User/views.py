@@ -46,7 +46,9 @@ def All_Product_By_Company(request):
 
     for i in range(0,len(data)):
         InWishlist = Wishlist.objects.filter(product_name__iexact=data[i],user_email__iexact=request.user.email).exists()
+        InCart = Cart.objects.filter(product_name__iexact=data[i].p_name, user_email__iexact=request.user.email).exists()
         data[i].inWishlist = InWishlist
+        data[i].inCart = InCart
 
     return render(request, temp, {'data':data, 'CompanyName':company.c_name})
 

@@ -83,13 +83,27 @@
                                                                 </button>
                                                             </form>
                                                         {% endif %}
+                                                            &nbsp;&nbsp;
+                                                        {% if i.inCart %}
+                                                            <form method="POST" style="height:100%;"  action="{% url 'Cart:Remove_From_Cart' %}">
+                                                                {% csrf_token %}
+                                                                <input type="hidden" name="productId" value="{{ data.id }}">
+                                                                <button class="btn btn-danger"  style="border-radius:5px;">
+                                                                    Remove From Cart
+                                                                </button>
+                                                            </form>
+                                                        {% else %}
+                                                            <form method="POST" style="height:100%;"  action="{% url 'Cart:Add_To_Cart_From_All_Product_View' %}">
+                                                                {% csrf_token %}
+                                                                <input type="hidden" name="productId" value="{{ i.id }}">
+                                                                <input type="hidden" name="productName" value="{{ i.p_name }}">
+                                                                <input type="hidden" name="productPrice" value="{{ i.p_price }}">
+                                                                <button class="btn btn-primary"  style="border-radius:5px;">
+                                                                Add To Cart
+                                                                </button>
+                                                                </form>
+                                                        {% endif %}
 
-                                                            <a class="action-cart" title="Add To Cart" href="#">
-                                                                Add to Cart
-                                                            </a>
-                                                            <a class="same-action compare-mrg" data-target="#exampleCompare" data-toggle="modal" title="Compare" href="#">
-                                                                <i class="fa fa-sliders fa-rotate-90"></i>
-                                                            </a>
                                                         </div>
                                                     </div>
                                                 </div>
