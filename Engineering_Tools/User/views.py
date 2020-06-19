@@ -53,7 +53,6 @@ def Product_Details_View(request, ID):
     return render(request, temp, {'data':data, 'categoryName':category.catagory_name, 'review_form':review_form, 'review_data':review_data})
 
 def Add_Product_Review_View(request):
-    temp = "User/product_details.html"
     product_id = request.POST.get('product_id')
     product_name = request.POST.get('product_name')
     if request.method == "POST":
@@ -80,3 +79,8 @@ def Add_Product_Review_View(request):
         print("get")
         return redirect('User:All_Company')
 
+
+
+def User_Wishlist_View(request):
+    temp = "User/wishlist.html"
+    return render(request, temp)
