@@ -25,6 +25,7 @@ urlpatterns = [
     path('Company/', include('Company.urls_company', namespace="Company")),
     path('EngineeringTools/', include('User.urls_user' , namespace="User")),
     path('ET_Admin/',include('ET_Admin.urls_admin', namespace='Admin')),
+    path('EngineeringTools/Cart/', include('Cart.urls_cart', namespace="Cart")),
 ]
 
 if settings.DEBUG:
