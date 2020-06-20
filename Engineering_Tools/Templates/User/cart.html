@@ -35,17 +35,24 @@
                                         {% for i in data %}
                                             <tr>
                                                 <td>{{ i.product_name }}</td>
-                                                <td>{{ i.price }}</td>
+                                                <td>{{ i.price }} $</td>
                                                 <td>{{ i.quantity }}</td>
-                                                <td>{{ i.sub_total }}</td>
+                                                <td>{{ i.sub_total }} $</td>
                                                 <td>{{ i.added_in_cart }}</td>
                                             </tr>
                                         {% endfor %}
+                                    <tr style="background-color:#EEF0F1">
+                                        <td colspan="3">
 
+                                        </td>
+                                        <td>
+                                            <b>Grand Total:</b> {{ TOTAL }} $
+                                        </td>
+                                        <td></td>
+                                    </tr>
                                     </tbody>
                                 </table>
                             </div>
-                            <hr>
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="cart-shiping-update-wrapper">

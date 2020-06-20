@@ -99,4 +99,8 @@ def User_Wishlist_View(request):
 def User_Cart_View(request):
     temp = "User/cart.html"
     data = Cart.objects.filter(user=request.user).order_by('-added_in_cart')
-    return render(request, temp, {'data':data})
+    TOTAL = 0
+    for i in range(0, len(data)):
+        TOTAL = TOTAL + float(data[i].sub_total)
+    print(TOTAL)
+    return render(request, temp, {'data':data, 'TOTAL':TOTAL})
