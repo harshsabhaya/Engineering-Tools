@@ -40,9 +40,13 @@
                                                 <td>{{ i.price }}</td>
                                                 <td>{{ i.added_in_wishlist }}</td>
                                                 <td>
-                                                    <button class="btn btn-primary" style="border-radius:5px">
-                                                        Add To Cart
-                                                    </button>
+                                                    <form method="POST" action="{% url 'Cart:WishList_To_Cart' %}">
+                                                        {% csrf_token %}
+                                                        <input type="hidden" value="{{ i.id }}" name="ID">
+                                                        <button class="btn btn-primary" style="border-radius:5px">
+                                                            Add To Cart
+                                                        </button>
+                                                    </form>
                                                 </td>
                                                 <td>
                                                     <form method="POST" action="{% url 'Cart:Remove_From_Wish_LIST' %}">

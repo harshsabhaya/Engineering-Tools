@@ -107,3 +107,14 @@ def Remove_From_Cart_From_All_Product_View(request):
         return redirect('User:Cart')
     else:
         return redirect("User:Home")
+
+def Wishlist_To_cart_View(request):
+    if request.method == "POST":
+        id = request.POST.get('ID')
+        data = Wishlist.objects.get(id = id)
+        Cart.objects.create(product_name=data.product_name, user_name=data.user_name, user_email=data.user_email, price=data.price,
+                            product_id=data.product_id, user_id=data.user_id, quantity=1, sub_total=data.price)
+        Wishlist.objects.filter(id=id).delete()
+        return redirect('User:Wishlist')
+    else:
+        return redirect('User:Wishlist')
