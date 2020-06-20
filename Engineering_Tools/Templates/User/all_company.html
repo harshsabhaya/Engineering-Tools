@@ -31,13 +31,9 @@
                                                         </div>
                                                         <div style="padding:6%;" class="col-md-4 col-sm-4">
                                                             <center>
-                                                                <form action="{% url 'User:All_Product_By_Company' %}" method="POST">
-                                                                    {% csrf_token %}
-                                                                    <input type="hidden" value="{{ i.c_email }}" name="Company_Email">
-                                                                    <button class="btn btn-primary" style="border-radius:5px;">
+                                                                    <a class="btn btn-primary" href="{% url 'User:All_Product_By_Company' i.c_email %}" style="border-radius:5px;">
                                                                         All Product
-                                                                    </button>
-                                                                </form>
+                                                                    </a>
                                                             </center>
                                                         </div>
                                                         <div  class="col-md-8 col-sm-8">

@@ -38,10 +38,9 @@ def All_Company_View(request):
     data = Company_Profile.objects.all()
     return render(request, temp, {'data':data})
 
-def All_Product_By_Company(request):
+def All_Product_By_Company(request, email):
     temp = "User/all_product_by_company.html"
-    companyEmail = request.POST.get("Company_Email")
-    company = Register.objects.get(c_email = companyEmail)
+    company = Register.objects.get(c_email = email)
     data = Product_Hardware.objects.filter(p_company_id = company.id)
 
     for i in range(0,len(data)):
