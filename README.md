@@ -10,4 +10,4 @@
 - Readonly Select Field in Edit :: Company Side
 - Need To Add Toast Messages
 - Unique Email in Login :: Company Side
-- From POST request to GET request conversion for all product for company page :: User side
+- Need to change return method from Redirect to reverse for all product for company page :: User side
