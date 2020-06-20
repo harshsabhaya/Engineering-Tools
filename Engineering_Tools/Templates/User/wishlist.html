@@ -22,7 +22,14 @@
                 <h3 class="page-title">Your WishList items</h3>
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-                            <div class="table-content table-responsive wishlist">
+                        {% if not data %}
+                            <center>
+                                <p style="font-size:20px; font-style:italic;">You Don't Have Any Product In Your WishList...</p>
+                                <p style="font-size:16px; font-style:italic;">Want To See All Product?. Please, <span><a style="color:blue;" href="#">Click Here</a></span> ...</p>
+                                <p style="font-size:15px; font-style:italic;">Want To See All Companies?. Please, <span><a style="color:blue;" href="{% url 'User:All_Company' %}">Click Here</a></span> ...</p>
+                            </center>
+                        {% else %}
+                        <div class="table-content table-responsive wishlist">
                                 <table class="col-lg-12 col-md-12 col-sm-12 col-12">
                                     <thead>
                                         <tr>
@@ -62,6 +69,7 @@
                                     </tbody>
                                 </table>
                             </div>
+                        {% endif %}
                     </div>
                 </div>
             </div>
